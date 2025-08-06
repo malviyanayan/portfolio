@@ -28,6 +28,14 @@
   /* border: 2px solid #0b0c0c; */
 }
 
+.txt-light{
+    color: #626060 !important;
+}
+
+.txt-dark{
+    color: #f2f0f0 !important;
+}
+
 .link-light,
 .link-dark {
   position: relative;
