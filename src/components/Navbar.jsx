@@ -156,14 +156,21 @@ const Navbar = () => {
             </div>
 
             <div className="action-buttons">
-  <button className={`custom-btn ${theme ? 'btn-light-mode' : 'btn-dark-mode'}`}>
-    Resume
-  </button>
-  <button className={`custom-btn ${theme ? 'btn-light-mode' : 'btn-dark-mode'}`}>
-    Contact Me
-  </button>
-</div>
-
+              <button
+                className={`custom-btn ${
+                  theme ? "btn-light-mode" : "btn-dark-mode"
+                }`}
+              >
+                Resume
+              </button>
+              <button
+                className={`custom-btn ${
+                  theme ? "btn-light-mode" : "btn-dark-mode"
+                }`}
+              >
+                Contact Me
+              </button>
+            </div>
 
             {/* links */}
             <div className="sidebar-links mt-4">
