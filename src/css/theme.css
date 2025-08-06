@@ -1,0 +1,89 @@
+.bg-1-dark {
+  background: radial-gradient(ellipse at bottom, #0d1b2a 0%, #000000 100%);
+}
+
+.bg-1-light {
+  background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+}
+
+.nav-dark {
+  background: rgba(5, 10, 20, 0.6);
+  backdrop-filter: blur(5px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-light {
+  background: rgba(248, 248, 248);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(75, 74, 74, 0.2);
+}
+
+.logo-dark {
+  color: #00f2fe;
+  /* border: 2px solid red; */
+}
+
+.logo-light {
+  color: #333434;
+  /* border: 2px solid #0b0c0c; */
+}
+
+.link-light,
+.link-dark {
+  position: relative;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+/* Theme-based text color */
+.link-light {
+  color: #626060 !important;
+}
+
+.link-dark {
+  color: #f2f0f0 !important;
+}
+
+/* Hover underline animation */
+.link-light::after,
+.link-dark::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(90deg, #00f2fe, #00c3ff);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease;
+}
+
+/* Hover effects with gradient text + underline */
+.link-light:hover,
+.link-dark:hover {
+  color: transparent !important;
+  background: linear-gradient(90deg, #00f2fe, #00c3ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Keep the same gradient for underline */
+.link-light::after,
+.link-dark::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(90deg, #00f2fe, #00c3ff);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease;
+}
+
+
