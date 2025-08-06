@@ -24,10 +24,7 @@ const Navbar = () => {
           </div>
 
           <div className="nav-links gap-4 align-items-center fw-medium">
-            <a
-              href="#home"
-              className={`${theme ? "link-light" : "link-dark"}`}
-            >
+            <a href="#home" className={`${theme ? "link-light" : "link-dark"}`}>
               Home
             </a>
             <a
@@ -94,8 +91,28 @@ const Navbar = () => {
           </div>
 
           {/* Sidebar Content Here */}
-          <div className="sidebar-content">
-            <p>Put your links or content here...</p>
+          <div className="sidebar-content text-center">
+            <div className="profile-photo-wrapper">
+              <img
+                src="/images/profilephoto.png"
+                alt="My Photo"
+                className="profile-photo border border-5 border-dark"
+              />
+            </div>
+            <h2 className="profile-name">John Doe</h2>
+            <p className="profile-title">Web Developer</p>
+
+            <div className="social-icons">
+              <i className="fab fa-twitter"></i>
+              <i className="fab fa-facebook-f"></i>
+              <i className="fab fa-linkedin-in"></i>
+              <i className="fab fa-instagram"></i>
+            </div>
+
+            <div className="action-buttons">
+              <button className="btn btn-outline-light">Download CV</button>
+              <button className="btn btn-outline-light">Contact Me</button>
+            </div>
           </div>
         </div>
       )}
