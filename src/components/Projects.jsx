@@ -1,9 +1,9 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
-// import "../css/projects.css"; 
+import "../css/projects.css";
 
-const projects = {
-  projects: [
+export default function Projects() {
+  const projects = [
     {
       title: "E Learning Plateform",
       url: "https://learnify-8pya.onrender.com/",
@@ -120,15 +120,13 @@ const projects = {
       description:
         "This Java-based Library Management System is a command-line application that handles book inventory, member records, issuing and returning of books. It utilizes file handling and Java object serialization for persistent data storage. The system is designed to provide efficient book management for small library setups, and it's a good example of applying core Java concepts in real-world problem solving.",
     },
-  ],
-};
+  ];
 
-export default function Projects() {
   return (
     <section className="projects-section" id="projects">
       <h2 className="section-title">Projects</h2>
       <div className="projects-grid">
-        {projects.projects.map((proj, index) => (
+        {projects.map((proj, index) => (
           <ProjectCard key={index} project={proj} />
         ))}
       </div>

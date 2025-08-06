@@ -2,6 +2,7 @@ import { useSelector } from "react-redux"
 import Home from "./Home"
 import Skills from "./Skills"
 import Projects from "./Projects"
+import Leetcode from "./Leetcode"
 
 function MyApp() {
   let theme = useSelector((state) => state.theme.value)
@@ -9,7 +10,13 @@ function MyApp() {
     <>
       <Home />
       <Skills />
+
+      {/* Competative Profile */}
+      <Leetcode />
+
       <Projects />
+      {/* <Certificates /> */}
+      
     </>
   )
 }
