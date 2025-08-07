@@ -8,7 +8,7 @@ export default function Leetcode() {
 
   return (
     <div className="leetcode-container">
-      <h2 className="leetcode-title"> My LeetCode Profile</h2>
+      <h2 className="leetcode-title"> My Competitive Profile</h2>
 
       <div className="leetcode-image-wrapper">
         <img
