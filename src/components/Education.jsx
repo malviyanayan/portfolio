@@ -6,21 +6,21 @@ const Education = () => {
       title: 'Bachelor of Technology in CSE',
       duration: 'Aug 2021 – May 2025',
       institution: 'University Institute of Technology, RGPV',
-      details: 'CGPA: 8.5/10',
+      details: 'CGPA: 7.55/10',
       position: 'left',
     },
     {
       title: '12th - Science Stream',
       duration: 'Apr 2020 – Apr 2021',
       institution: 'Govt. Higher Secondary School',
-      details: 'Percentage: 85%',
+      details: 'Percentage: 90.4%',
       position: 'right',
     },
     {
       title: '10th Board',
       duration: 'Apr 2018 – Apr 2019',
       institution: 'Govt. High School',
-      details: 'Percentage: 89%',
+      details: 'Percentage: 90.6%',
       position: 'left',
     },
   ];
@@ -53,3 +53,10 @@ const Education = () => {
 };
 
 export default Education;
+
+
+
+
+
+
+
