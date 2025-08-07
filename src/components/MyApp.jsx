@@ -3,6 +3,7 @@ import Home from "./Home"
 import Skills from "./Skills"
 import Projects from "./Projects"
 import Leetcode from "./Leetcode"
+import Education from "./Education"
 
 function MyApp() {
   let theme = useSelector((state) => state.theme.value)
@@ -16,6 +17,8 @@ function MyApp() {
 
       <Projects />
       {/* <Certificates /> */}
+
+      <Education />
       
     </>
   )

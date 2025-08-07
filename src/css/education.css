@@ -1,0 +1,146 @@
+.education-section-title {
+  text-align: left;
+  margin: 60px auto 30px;
+  max-width: 900px;
+}
+
+.education-bar {
+  width: 50px;
+  height: 8px;
+  background-color: #00f0ff;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.education-section-title h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #00e1ff;
+  margin: 0;
+}
+
+.education-section-title p {
+  color: #66cbd8;
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+.education-timeline {
+  max-width: 900px;
+  margin: 50px auto;
+  position: relative;
+  padding: 20px;
+}
+
+.education-timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #00f0ff;
+  transform: translateX(-50%);
+}
+
+.education-timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+
+.education-timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.education-timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+.education-timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 30px;
+  width: 15px;
+  height: 15px;
+  background: #00f0ff;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.education-timeline-item.left::before {
+  right: -8px;
+}
+
+.education-timeline-item.right::before {
+  left: -8px;
+}
+
+.education-card {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 242, 255, 0.05),
+    rgba(255, 255, 255, 0.01)
+  );
+  padding: 25px 30px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 242, 255, 0.15);
+  box-shadow: 0 6px 25px rgba(0, 242, 255, 0.08);
+  backdrop-filter: blur(8px);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.education-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 242, 255, 0.2);
+}
+
+.education-card h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 1.3rem;
+  color: #00f0ff;
+  font-weight: 600;
+}
+
+.education-card span {
+  display: block;
+  font-size: 0.95rem;
+  color: #a7f1f8;
+  margin-bottom: 10px;
+}
+
+.education-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #e0f7ff;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .education-timeline::before {
+    left: 8px;
+  }
+
+  .education-timeline-item {
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 10px;
+  }
+
+  .education-timeline-item.left,
+  .education-timeline-item.right {
+    left: 0;
+    text-align: left;
+  }
+
+  .education-timeline-item::before {
+    left: 0;
+  }
+}

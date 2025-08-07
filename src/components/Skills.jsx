@@ -74,7 +74,7 @@ export default function Skills() {
                   src="/skills/versioncontrol.png"
                   alt="Version Control System"
                 />{" "}
-                Version Control
+                Version Control System
               </li>
             </ul>
           </div>
