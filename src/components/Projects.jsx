@@ -20,7 +20,7 @@ export default function Projects() {
         "This project is a comprehensive e-learning platform that allows students to enroll in courses, track their individual progress, and take notes while learning. Built using Advanced Java and Bootstrap, the platform ensures a smooth user experience with features like chapter navigation, interactive sessions, and responsive layouts. It includes user registration, authentication, and a clean dashboard for managing content efficiently.",
     },
     {
-      title: "DoFocus – Self Progress Monitoring Tool",
+      title: "DoFocus",
       url: "https://dofocus.netlify.app/",
       image: "projects/dofocus.png",
       tech: {

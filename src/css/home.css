@@ -26,7 +26,8 @@
 .home-left h1 {
   font-size: 3.2rem;
   font-weight: bold;
-  background: linear-gradient(45deg, #ff6ec4, #7873f5);
+  /* background: linear-gradient(45deg, #ff6ec4, #7873f5); */
+  background: linear-gradient(45deg, #ff512f, #dd2476);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 20px;

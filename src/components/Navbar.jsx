@@ -85,6 +85,7 @@ const Navbar = () => {
               <input
                 type="checkbox"
                 id="mode-toggle"
+                checked={!theme}
                 onChange={() => dispatch(changeTheme())}
               />
               <span className="slider"></span>

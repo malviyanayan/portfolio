@@ -25,29 +25,30 @@
 
 /* Individual Project Card Style - temporary placeholder, update ProjectCard.js later */
 .project-card {
-  background: rgba(255, 255, 255, 0.05);
+  /* background: rgba(255, 255, 255, 0.05); */
   backdrop-filter: blur(10px);
-  border-radius: 20px;
-  padding: 20px;
+  border-radius: 6px;
+  overflow: hidden;
+  /* padding: 20px; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 0 20px rgba(0, 242, 254, 0.15);
+  /* box-shadow: 0 0 20px rgba(0, 242, 254, 0.15); */
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .project-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 0 30px rgba(0, 242, 254, 0.3);
+  /* box-shadow: 0 0 30px rgba(0, 242, 254, 0.3); */
 }
 
 .project-image {
   width: 100%;
   height: 180px;
   object-fit: cover;
-  border-radius: 15px;
-  margin-bottom: 20px;
+  /* border-radius: 15px; */
+  /* margin-bottom: 20px; */
 }
 
 .project-title {
@@ -55,12 +56,14 @@
   font-weight: 600;
   margin-bottom: 10px;
   color: #00f2fe;
+  margin: 10px;
 }
 
 .project-subtitle {
   font-size: 1rem;
   font-style: italic;
   color: #ccc;
+  margin: 10px;
   margin-bottom: 12px;
 }
 
@@ -76,6 +79,7 @@
   justify-content: flex-end;
   gap: 10px;
   flex-wrap: wrap;
+  margin: 10px;
 }
 
 .project-buttons .btn {

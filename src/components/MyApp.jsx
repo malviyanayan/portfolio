@@ -10,12 +10,12 @@ function MyApp() {
   return (
     <>
       <Home />
+      <Projects />
       <Skills />
 
       {/* Competative Profile */}
       <Leetcode />
 
-      <Projects />
       {/* <Certificates /> */}
 
       <Education />
