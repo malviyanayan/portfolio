@@ -18,7 +18,6 @@ const router = createBrowserRouter([
 
 function App() {
 
-  alert("Asubidha ke liye khed hai.. website juld hi complete hogi...");
   return (
     <RouterProvider router={router} />
   );

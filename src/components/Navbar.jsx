@@ -19,8 +19,8 @@ const Navbar = () => {
             theme ? "nav-light" : "nav-dark"
           }`}
         >
-          <div className={`nav-logo ${theme ? "logo-light" : "logo-dark"}`}>
-            🌌Nayan Malviya
+          <div className={`d-flex h-100 align-items-center gap-2 nav-logo ${theme ? "logo-light" : "logo-dark"}`}>
+            <img src="/fabicon1.svg" width={28} />Nayan Malviya
           </div>
 
           <div className="nav-links gap-4 align-items-center fw-medium">
@@ -72,7 +72,9 @@ const Navbar = () => {
             theme ? "bg-1-light" : "bg-1-dark"
           }`}
         >
-          <div className="d-flex justify-content-between align-items-center p-2 pt-0 position-fixed w-100">
+          <div className={`position-sticky top-0 w-100 d-flex align-items-center justify-content-between px-3 ${
+            theme ? "head-white" : "head-black"
+          }`}>
             <button
               className="close-sidebar-btn fs-1 mt-0 pt-0"
               onClick={() => setSidebar(!sidebar)}
@@ -93,7 +95,7 @@ const Navbar = () => {
           </div>
 
           {/* Sidebar Content Here */}
-          <div className="sidebar-content text-center mt-5">
+          <div className="sidebar-content text-center mt-0">
             <div className="profile-photo-wrapper">
               <img
                 src="/images/profilephoto.png"

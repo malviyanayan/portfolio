@@ -95,3 +95,12 @@
 }
 
 
+.head-black {
+  background-color: #04090e;
+  box-shadow: 0 4px 12px 0 rgba(0,0,0,0.25);
+}
+
+.head-white {
+  background-color: #f8f8f8;
+  box-shadow: 0 4px 12px 0 rgba(60,60,60,0.08);
+}

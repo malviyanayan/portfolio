@@ -231,7 +231,7 @@ input:checked + .slider:before {
   height: 100vh;
 
   /* Slightly narrow, responsive width */
-  width: clamp(260px, 28vw, 360px);
+  width: clamp(260px, 50vw, 360px);
   max-width: 100%;
 
   padding: 20px;
