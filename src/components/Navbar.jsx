@@ -72,7 +72,7 @@ const Navbar = () => {
             theme ? "bg-1-light" : "bg-1-dark"
           }`}
         >
-          <div className={`position-sticky top-0 w-100 d-flex align-items-center justify-content-between px-3 ${
+          <div className={`position-sticky top-0 w-100 d-flex align-items-center justify-content-between px-2 py-2 ${
             theme ? "head-white" : "head-black"
           }`}>
             <button
