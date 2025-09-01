@@ -1,165 +1,125 @@
 import React from "react";
+import SkillCategory from "./SkillCategory";
 import "../css/skills.css";
+import FadeInOnScroll from "./animation/FadeInOnScroll";
 
 export default function Skills() {
+  const leftSkills = [
+    {
+      title: "Programming Skills",
+      skills: [
+        { name: "Core Java", img: "/skills/java.png" },
+        { name: "JavaScript", img: "/skills/js.png" },
+      ],
+    },
+    {
+      title: "Frontend Technologies",
+      skills: [
+        { name: "HTML", img: "/skills/html.png" },
+        { name: "CSS", img: "/skills/css.png" },
+        { name: "AJAX", img: "/skills/ajax.png" },
+      ],
+    },
+    {
+      title: "Databases",
+      skills: [
+        { name: "MySQL", img: "/skills/db.png" },
+        { name: "JPA", img: "/skills/api.png" },
+        { name: "Hibernate", img: "/skills/hibernate.svg" },
+      ],
+    },
+    {
+      title: "Tools",
+      skills: [
+        { name: "VS Code", img: "/skills/vscode.png" },
+        { name: "Tomcat", img: "/skills/tomcat.png" },
+        { name: "Eclipse", img: "/skills/eclipse.png" },
+        { name: "IntelliJ IDEA", img: "/skills/intellijidea.png" },
+        { name: "Postman", img: "/skills/postman.png" },
+        { name: "Version Control System", img: "/skills/versioncontrol.png" },
+      ],
+    },
+  ];
+
+  const rightSkills = [
+    {
+      title: "Frameworks",
+      skills: [
+        { name: "Bootstrap", img: "/skills/bootstrap.png" },
+        { name: "React", img: "/skills/react.png" },
+        { name: "Redux", img: "/skills/redux.png" },
+        { name: "Spring Boot", img: "/skills/springboot.png" },
+      ],
+    },
+    {
+      title: "Advanced Java",
+      skills: [
+        { name: "Servlet", img: "/skills/servlet.png" },
+        { name: "JSP", img: "/skills/jsppng.png" },
+        { name: "EL", img: "/skills/el.png" },
+        { name: "JSTL", img: "/skills/jstl.png" },
+        { name: "Custom Tags", img: "/skills/custom.png" },
+        { name: "MVC Architecture", img: "/skills/mvc.png" },
+      ],
+    },
+    {
+      title: "APIs & Libraries",
+      skills: [
+        { name: "Twilio", img: "/skills/twillio.png" },
+        { name: "JavaMail", img: "/skills/javamail.png" },
+        { name: "Jasypt", img: "/skills/jasypt.png" },
+        { name: "Gson", img: "/skills/gson.png" },
+      ],
+    },
+  ];
+
+  const funSkills = [
+    { name: "C", img: "/skills/c.png" },
+    { name: "C++", img: "/skills/cpp.png" },
+    { name: "Python", img: "/skills/python.png" },
+    { name: "Mongo DB", img: "/skills/mongodb.png" },
+  ];
+
   return (
     <section className="skills-section" id="skills">
-      <h2 className="section-title">Skills</h2>
+      <FadeInOnScroll>
+        <h2 className="section-title">Skills</h2>
+      </FadeInOnScroll>
+
       <div className="skills-grid">
-        {/* Left Container */}
         <div className="left-skills-grid">
-          <div className="skill-category">
-            <h3>Programming Skills</h3>
-            <ul>
-              <li>
-                <img src="/skills/java.png" alt="Core Java" /> Core Java
-              </li>
-              <li>
-                <img src="/skills/js.png" alt="JavaScript" /> JavaScript
-              </li>
-            </ul>
-          </div>
-
-          <div className="skill-category">
-            <h3>Frontend Technologies</h3>
-            <ul>
-              <li>
-                <img src="/skills/html.png" alt="HTML" /> HTML
-              </li>
-              <li>
-                <img src="/skills/css.png" alt="CSS" /> CSS
-              </li>
-              <li>
-                <img src="/skills/ajax.png" alt="AJAX" /> AJAX
-              </li>
-            </ul>
-          </div>
-
-          <div className="skill-category">
-            <h3>Databases</h3>
-            <ul>
-              <li>
-                <img src="/skills/db.png" alt="MySQL" /> MySQL
-              </li>
-              <li>
-                <img src="/skills/api.png" alt="JPA" /> JPA
-              </li>
-              <li>
-                <img src="/skills/hibernate.svg" alt="Hibernate" /> Hibernate
-              </li>
-            </ul>
-          </div>
-
-          <div className="skill-category">
-            <h3>Tools</h3>
-            <ul>
-              <li>
-                <img src="/skills/vscode.png" alt="VS Code" /> VS Code
-              </li>
-              <li>
-                <img src="/skills/tomcat.png" alt="Tomcat" /> Tomcat
-              </li>
-              <li>
-                <img src="/skills/eclipse.png" alt="Eclipse" /> Eclipse
-              </li>
-              <li>
-                <img src="/skills/intellijidea.png" alt="IntelliJ IDEA" />{" "}
-                IntelliJ IDEA
-              </li>
-              <li>
-                <img src="/skills/postman.png" alt="postman" /> Postman
-              </li>
-              <li>
-                <img
-                  src="/skills/versioncontrol.png"
-                  alt="Version Control System"
-                />{" "}
-                Version Control System
-              </li>
-            </ul>
-          </div>
+          {leftSkills.map((category) => (
+            <SkillCategory
+              key={category.title}
+              title={category.title}
+              skills={category.skills}
+            />
+          ))}
         </div>
 
-        {/* Right Container */}
         <div className="right-skills-grid">
-          <div className="skill-category">
-            <h3>Frameworks</h3>
-            <ul>
-              <li>
-                <img src="/skills/bootstrap.png" alt="Bootstrap" /> Bootstrap
-              </li>
-              <li>
-                <img src="/skills/react.png" alt="React" /> React
-              </li>
-              <li>
-                <img src="/skills/redux.png" alt="Redux" /> Redux
-              </li>
-              <li>
-                <img src="/skills/springboot.png" alt="Spring Boot" /> Spring
-                Boot
-              </li>
-            </ul>
-          </div>
-
-          <div className="skill-category">
-            <h3>Advanced Java</h3>
-            <ul>
-              <li>
-                <img src="/skills/servlet.png" alt="Servlet" /> Servlet
-              </li>
-              <li>
-                <img src="/skills/jsppng.png" alt="JSP" /> JSP
-              </li>
-              <li>
-                <img src="/skills/el.png" alt="EL" /> EL
-              </li>
-              <li>
-                <img src="/skills/jstl.png" alt="JSTL" /> JSTL
-              </li>
-              <li>
-                <img src="/skills/custom.png" alt="Custom Tags" /> Custom Tags
-              </li>
-              <li>
-                <img src="/skills/mvc.png" alt="MVC Architecture" /> MVC
-                Architecture
-              </li>
-            </ul>
-          </div>
-
-          <div className="skill-category">
-            <h3>APIs & Libraries</h3>
-            <ul>
-              <li>
-                <img src="/skills/twillio.png" alt="Twilio" /> Twilio
-              </li>
-              <li>
-                <img src="/skills/javamail.png" alt="JavaMail" /> JavaMail
-              </li>
-              <li>
-                <img src="/skills/jasypt.png" alt="Jasypt" /> Jasypt
-              </li>
-              <li>
-                <img src="/skills/gson.png" alt="Gson" /> Gson
-              </li>
-            </ul>
-          </div>
+          {rightSkills.map((category) => (
+            <SkillCategory
+              key={category.title}
+              title={category.title}
+              skills={category.skills}
+            />
+          ))}
         </div>
       </div>
+
       <div className="fun-explored-box">
-        <h3>I know a bit of these too</h3>
+        <FadeInOnScroll>
+          <h3>I know a bit of these too</h3>
+        </FadeInOnScroll>
         <ul>
-          <li>
-            <img src="/skills/c.png" alt="C" /> C
-          </li>
-          <li>
-            <img src="/skills/cpp.png" alt="CPP" /> C++
-          </li>
-          <li>
-            <img src="/skills/python.png" alt="Python" /> Python
-          </li>
-          <li>
-            <img src="/skills/mongodb.png" alt="mongodb" /> Mongo DB
-          </li>
+          {funSkills.map((skill) => (
+            <FadeInOnScroll>
+              <li key={skill.name}>
+              <img src={skill.img} alt={skill.name} /> {skill.name}
+            </li>
+            </FadeInOnScroll>
+          ))}
         </ul>
       </div>
     </section>
