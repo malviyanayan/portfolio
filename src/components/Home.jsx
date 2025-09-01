@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import '../css/home.css';
-
+import React, { useState, useEffect } from "react";
+import "../css/home.css";
+import ScrollFromRight from "./animation/ScrollFromRight";
+import FadeInOnScroll from "./animation/FadeInOnScroll";
 
 const titles = [
   "Full Stack Developer",
   "Java Developer",
   "React Enthusiast",
-  "Backend Engineer"
+  "Backend Engineer",
 ];
 
 const Home = () => {
@@ -22,9 +23,12 @@ const Home = () => {
       setIndex((prev) => (prev + 1) % titles.length);
     }
 
-    const timeout = setTimeout(() => {
-      setSubIndex((prev) => prev + (forward ? 1 : -1));
-    }, forward ? 150 : 50);
+    const timeout = setTimeout(
+      () => {
+        setSubIndex((prev) => prev + (forward ? 1 : -1));
+      },
+      forward ? 150 : 50
+    );
 
     return () => clearTimeout(timeout);
   }, [subIndex, forward, index]);
@@ -32,21 +36,32 @@ const Home = () => {
   return (
     <div className="home">
       <div className="home-left">
-        <h2>Hi There!</h2>
-        <h1>I'M NAYAN MALVIYA</h1>
-        <div className="im-changing">
+        <FadeInOnScroll>
+          <h2>Hi There!</h2>
+        </FadeInOnScroll>
+        <FadeInOnScroll>
+          <h1>I'M NAYAN MALVIYA</h1>
+        </FadeInOnScroll>
+        <FadeInOnScroll>
+          <div className="im-changing">
           {titles[index].substring(0, subIndex)}
           <span className="cursor">|</span>
         </div>
+        </FadeInOnScroll>
       </div>
 
       <div className="home-right position-relative">
-  <div className="corner-box top-left-box"></div>
-  <div className="corner-box bottom-right-box"></div>
+        <div className="corner-box top-left-box"></div>
+        <div className="corner-box bottom-right-box"></div>
 
-  <img src="/images/home1.jpeg" alt="my-image" className="profile-image" />
-</div>
-
+        <ScrollFromRight>
+          <img
+            src="/images/home1.jpeg"
+            alt="my-image"
+            className="profile-image"
+          />
+        </ScrollFromRight>
+      </div>
     </div>
   );
 };
