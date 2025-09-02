@@ -1,0 +1,111 @@
+/* ========================
+   Contact Section Styling
+======================== */
+.contact-section {
+  padding: 80px 20px;
+  background: transparent;
+  color: #fff;
+  text-align: center;
+}
+
+.contact-section .section-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #00f2fe;
+  position: relative;
+}
+
+/* ========================
+   Contact Form
+======================== */
+.contact-form {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #e0e0e0;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #00f2fe;
+  box-shadow: 0 0 8px rgba(0, 242, 254, 0.4);
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+/* ========================
+   Submit Button
+======================== */
+.form-submit {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.submit-btn {
+  background: transparent;
+  border: 1px solid #00f2fe;
+  color: #00f2fe;
+  padding: 10px 28px;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #00f2fe;
+  color: #000;
+}
+
+/* ========================
+   Responsive
+======================== */
+@media (max-width: 768px) {
+  .contact-section .section-title {
+    font-size: 2rem;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+}
+
+
+.error-text {
+  color: #ff4d4d;
+  font-size: 0.85rem;
+  margin-top: 5px;
+}
+
+.success-text {
+  color: #28a745;
+  font-size: 0.9rem;
+  margin-top: 15px;
+  text-align: center;
+  font-weight: 500;
+}

@@ -4,6 +4,9 @@ import Skills from "./Skills"
 import Projects from "./Projects"
 import Leetcode from "./Leetcode"
 import Education from "./Education"
+import About from "./About"
+import Footer from "./Footer"
+import Contact from "./Contact"
 
 function MyApp() {
   let theme = useSelector((state) => state.theme.value)
@@ -19,6 +22,13 @@ function MyApp() {
       {/* <Certificates /> */}
 
       <Education />
+
+      <About />
+
+      <Contact />
+
+      <Footer />
+
       
     </>
   )

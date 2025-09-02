@@ -1,0 +1,34 @@
+/* ========================
+   Footer Styling
+======================== */
+.footer-section {
+  background: #0d1117;
+  padding: 20px 0;
+  color: #ccc;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-text {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.footer-text .highlight {
+  color: #00f2fe;
+  font-weight: 600;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: #00f2fe;
+  margin: 0 10px;
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #00ffff;
+}
