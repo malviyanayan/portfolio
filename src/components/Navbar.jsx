@@ -2,6 +2,9 @@ import { useRef, useState } from "react";
 import "../css/navbar.css";
 import { changeTheme } from "../features/theme/themeSlice";
 import { useDispatch, useSelector } from "react-redux";
+import FadeInOnScroll from "./animation/FadeInOnScroll";
+import ScrollFromLeft from "./animation/ScrollFromLeft";
+import ScrollFromRight from "./animation/ScrollFromRight";
 
 const Navbar = () => {
   const menuRef = useRef(null);
@@ -19,8 +22,13 @@ const Navbar = () => {
             theme ? "nav-light" : "nav-dark"
           }`}
         >
-          <div className={`d-flex h-100 align-items-center gap-2 nav-logo ${theme ? "logo-light" : "logo-dark"}`}>
-            <img src="/fabicon1.svg" width={28} />Nayan Malviya
+          <div
+            className={`d-flex h-100 align-items-center gap-2 nav-logo ${
+              theme ? "logo-light" : "logo-dark"
+            }`}
+          >
+            <img src="/fabicon1.svg" width={28} />
+            Nayan Malviya
           </div>
 
           <div className="nav-links gap-4 align-items-center fw-medium">
@@ -72,9 +80,11 @@ const Navbar = () => {
             theme ? "bg-1-light" : "bg-1-dark"
           }`}
         >
-          <div className={`position-sticky top-0 w-100 d-flex align-items-center justify-content-between px-2 py-2 ${
-            theme ? "head-white" : "head-black"
-          }`}>
+          <div
+            className={`position-sticky top-0 w-100 d-flex align-items-center justify-content-between px-2 py-2 ${
+              theme ? "head-white" : "head-black"
+            }`}
+          >
             <button
               className="close-sidebar-btn fs-1 mt-0 pt-0"
               onClick={() => setSidebar(!sidebar)}
@@ -97,24 +107,30 @@ const Navbar = () => {
           {/* Sidebar Content Here */}
           <div className="sidebar-content text-center mt-0">
             <div className="profile-photo-wrapper">
-              <img
-                src="/images/profilephoto.png"
-                alt="My Photo"
-                className="profile-photo border border-5 border-dark"
-              />
+              <FadeInOnScroll>
+                <img
+                  src="/images/profilephoto.png"
+                  alt="My Photo"
+                  className="profile-photo border border-5 border-dark"
+                />
+              </FadeInOnScroll>
             </div>
-            <h2
-              className={`profile-name ${theme ? "logo-light" : "logo-dark"}`}
-            >
-              Nayan Malviya
-            </h2>
-            <p
-              className={`profile-title fs-6 ${
-                theme ? "text-dark" : "text-light"
-              }`}
-            >
-              Aspiring Full Stack Developer
-            </p>
+            <FadeInOnScroll>
+              <h2
+                className={`profile-name ${theme ? "logo-light" : "logo-dark"}`}
+              >
+                Nayan Malviya
+              </h2>
+            </FadeInOnScroll>
+            <FadeInOnScroll>
+              <p
+                className={`profile-title fs-6 ${
+                  theme ? "text-dark" : "text-light"
+                }`}
+              >
+                Aspiring Full Stack Developer
+              </p>
+            </FadeInOnScroll>
 
             <div
               className={`social-icons ${
@@ -122,31 +138,37 @@ const Navbar = () => {
               }`}
             >
               {/* LinkedIn */}
-              <a
-                href="https://www.linkedin.com/in/your-profile"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fab fa-linkedin-in"></i>
-              </a>
+              <FadeInOnScroll>
+                <a
+                  href="https://www.linkedin.com/in/your-profile"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-linkedin-in"></i>
+                </a>
+              </FadeInOnScroll>
 
               {/* GitHub */}
-              <a
-                href="https://github.com/your-username"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fab fa-github"></i>
-              </a>
+              <FadeInOnScroll>
+                <a
+                  href="https://github.com/your-username"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-github"></i>
+                </a>
+              </FadeInOnScroll>
 
               {/* LeetCode */}
-              <a
-                href="https://leetcode.com/your-username"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fa-solid fa-code"></i>
-              </a>
+              <FadeInOnScroll>
+                <a
+                  href="https://leetcode.com/your-username"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fa-solid fa-code"></i>
+                </a>
+              </FadeInOnScroll>
 
               {/* X (Twitter) */}
               <a
@@ -159,41 +181,51 @@ const Navbar = () => {
             </div>
 
             <div className="action-buttons">
-              <button
-                className={`custom-btn ${
-                  theme ? "btn-light-mode" : "btn-dark-mode"
-                }`}
-              >
-                Resume
-              </button>
-              <button
-                className={`custom-btn ${
-                  theme ? "btn-light-mode" : "btn-dark-mode"
-                }`}
-              >
-                Contact Me
-              </button>
+              <FadeInOnScroll>
+                <button
+                  className={`custom-btn ${
+                    theme ? "btn-light-mode" : "btn-dark-mode"
+                  }`}
+                >
+                  Resume
+                </button>
+              </FadeInOnScroll>
+              <FadeInOnScroll>
+                <button
+                  className={`custom-btn ${
+                    theme ? "btn-light-mode" : "btn-dark-mode"
+                  }`}
+                >
+                  Contact Me
+                </button>
+              </FadeInOnScroll>
             </div>
 
             {/* links */}
             <div className="sidebar-links mt-4">
-              <a
-                href="#home"
-                className={`sidebar-link ${
-                  theme ? "sidebar-link-light" : "sidebar-link-dark"
-                }`}
-              >
-                <i className="fas fa-home me-2"></i> Home
-              </a>
-              <a
-                href="#about"
-                className={`sidebar-link ${
-                  theme ? "sidebar-link-light" : "sidebar-link-dark"
-                }`}
-              >
-                <i className="fas fa-user me-2"></i> About
-              </a>
-              <a
+              <FadeInOnScroll>
+                <a
+                  href="#home"
+                  className={`sidebar-link ${
+                    theme ? "sidebar-link-light" : "sidebar-link-dark"
+                  }`}
+                >
+                  <i className="fas fa-home me-2"></i> Home
+                </a>
+              </FadeInOnScroll>
+              <FadeInOnScroll>
+                <a
+                  href="#about"
+                  className={`sidebar-link ${
+                    theme ? "sidebar-link-light" : "sidebar-link-dark"
+                  }`}
+                >
+                  <i className="fas fa-user me-2"></i> About
+                </a>
+              </FadeInOnScroll>
+
+              <FadeInOnScroll>
+                <a
                 href="#project"
                 className={`sidebar-link ${
                   theme ? "sidebar-link-light" : "sidebar-link-dark"
@@ -201,7 +233,10 @@ const Navbar = () => {
               >
                 <i className="fas fa-laptop-code me-2"></i> Project
               </a>
-              <a
+              </FadeInOnScroll>
+              
+              <FadeInOnScroll>
+                <a
                 href="#skills"
                 className={`sidebar-link ${
                   theme ? "sidebar-link-light" : "sidebar-link-dark"
@@ -209,6 +244,7 @@ const Navbar = () => {
               >
                 <i className="fas fa-code me-2"></i> Skills
               </a>
+              </FadeInOnScroll>
             </div>
           </div>
         </div>

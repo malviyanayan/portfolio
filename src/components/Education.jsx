@@ -1,4 +1,5 @@
 import '../css/education.css';
+import FadeInOnScroll from './animation/FadeInOnScroll';
 
 const Education = () => {
   const educationData = [
@@ -27,15 +28,18 @@ const Education = () => {
 
   return (
     <>
-      <div className="education-section-title">
+      <FadeInOnScroll>
+        <div className="education-section-title">
         <div className="education-bar"></div>
         <h2>Education</h2>
         <p>Currently – Undergraduate</p>
       </div>
+      </FadeInOnScroll>
 
       <section className="education-timeline">
         {educationData.map((edu, index) => (
-          <div className={`education-timeline-item ${edu.position}`} key={index}>
+          <FadeInOnScroll>
+            <div className={`education-timeline-item ${edu.position}`} key={index}>
             <div className="education-card">
               <h3>{edu.title}</h3>
               <span>{edu.duration}</span>
@@ -46,6 +50,7 @@ const Education = () => {
               </p>
             </div>
           </div>
+          </FadeInOnScroll>
         ))}
       </section>
     </>
