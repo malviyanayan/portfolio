@@ -146,7 +146,7 @@ const About = () => {
               </FadeInOnScroll>
 
               <FadeInOnScroll>
-                <li>
+                <li className="text-truncate">
                   <i class="fa-brands fa-instagram"></i>{" "}
                   <span className="label">Instagram:</span>{" "}
                   <a
