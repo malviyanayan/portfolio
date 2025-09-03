@@ -108,3 +108,50 @@
     font-size: 0.85rem;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.more-btn-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.more-btn {
+  background-color: transparent;
+  color: #00f2fe;
+  border: 1px solid #00f2fe;
+  padding: 10px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-radius: 4px;
+}
+
+.more-btn:hover {
+  background-color: #00f2fe;
+  color: #000;
+}

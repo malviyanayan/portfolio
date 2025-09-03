@@ -1,6 +1,7 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
 import "../css/projects.css";
+import FadeInOnScroll from "./animation/FadeInOnScroll";
 
 export default function Projects() {
   const projects = [
@@ -46,23 +47,33 @@ export default function Projects() {
       subtitle: "Check out my portfolio and let's connect!",
       description:
         "My personal portfolio website showcases my technical skills, professional background, and key projects. The site is built with clean HTML, CSS, and JavaScript, featuring modern UI components, smooth scrolling, and responsive design. It includes sections such as About, Skills, Projects, and Contact. This website serves as a gateway for recruiters and collaborators to understand my capabilities and reach out.",
-    }
+    },
   ];
 
   return (
-    <section className="projects-section" id="projects" style={{backgroundColor:"background: radial-gradient(ellipse at bottom, #0d1b2a 0%, #000000 100%);"}}>
+    <section
+      className="projects-section"
+      id="projects"
+      style={{
+        backgroundColor:
+          "background: radial-gradient(ellipse at bottom, #0d1b2a 0%, #000000 100%);",
+      }}
+    >
       <h2 className="section-title">Projects</h2>
       <div className="projects-grid">
         {projects.map((proj, index) => (
           <ProjectCard key={index} project={proj} />
         ))}
       </div>
+
+      <FadeInOnScroll>
+        <div className="more-btn-container">
+        <button className="more-btn">More Projects ...</button>
+      </div>
+      </FadeInOnScroll>
     </section>
   );
 }
-
-
-
 
 // ,
 //     {

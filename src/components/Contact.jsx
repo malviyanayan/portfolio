@@ -2,6 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import "../css/contact.css";
+import FadeInOnScroll from "./animation/FadeInOnScroll";
 
 const Contact = () => {
   const {
@@ -32,9 +33,11 @@ return (
     >
         <div className="container">
             {/* Section Heading */}
-            <h2 className="section-title" data-aos="fade-down">
+            <FadeInOnScroll>
+                <h2 className="section-title" data-aos="fade-down">
                 Get in Touch
             </h2>
+            </FadeInOnScroll>
 
             {/* Contact Form */}
             <form
@@ -43,7 +46,8 @@ return (
                 data-aos="fade-up"
             >
                 {/* Name */}
-                <div className="form-group">
+                <FadeInOnScroll>
+                    <div className="form-group">
                     <label htmlFor="name">Name</label>
                     <input
                         type="text"
@@ -54,9 +58,11 @@ return (
                         <p className="error-text">{errors.name.message}</p>
                     )}
                 </div>
+                </FadeInOnScroll>
 
                 {/* Email */}
-                <div className="form-group">
+                <FadeInOnScroll>
+                    <div className="form-group">
                     <label htmlFor="email">Email</label>
                     <input
                         type="text"
@@ -73,9 +79,11 @@ return (
                         <p className="error-text">{errors.email.message}</p>
                     )}
                 </div>
+                </FadeInOnScroll>
 
                 {/* Message */}
-                <div className="form-group">
+                <FadeInOnScroll>
+                    <div className="form-group">
                     <label htmlFor="message">Message</label>
                     <textarea
                         id="message"
@@ -86,9 +94,11 @@ return (
                         <p className="error-text">{errors.message.message}</p>
                     )}
                 </div>
+                </FadeInOnScroll>
 
                 {/* Submit */}
-                <div className="form-submit">
+                <FadeInOnScroll>
+                    <div className="form-submit">
                     <button type="submit" className="submit-btn" disabled={isSubmitting}>
                         {isSubmitting ? (
                             "Sending..."
@@ -100,6 +110,7 @@ return (
                         )}
                     </button>
                 </div>
+                </FadeInOnScroll>
 
                 {/* Success Text */}
                 {isSubmitSuccessful && (
