@@ -161,7 +161,7 @@ const About = () => {
               </FadeInOnScroll>
 
               <FadeInOnScroll>
-                <li>
+                <li className="text-truncate">
                   <i class="fa-brands fa-youtube"></i>{" "}
                   <span className="label">YouTube:</span>{" "}
                   <a

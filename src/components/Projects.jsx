@@ -66,11 +66,11 @@ export default function Projects() {
         ))}
       </div>
 
-      <FadeInOnScroll>
+      {/* <FadeInOnScroll>
         <div className="more-btn-container">
         <button className="more-btn">More Projects ...</button>
       </div>
-      </FadeInOnScroll>
+      </FadeInOnScroll> */}
     </section>
   );
 }
