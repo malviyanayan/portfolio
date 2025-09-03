@@ -63,7 +63,7 @@ const About = () => {
               </li>
               <li>
                 <i className="fas fa-phone"></i>{" "}
-                <span className="label">Phone:</span> +91-XXXXXXXXXX
+                <span className="label">Phone:</span> +91-7828186628
               </li>
               <li>
                 <i className="fab fa-linkedin"></i>{" "}
@@ -87,6 +87,42 @@ const About = () => {
                   className="link"
                 >
                   github.com/nayanmalviya
+                </a>
+              </li>
+              <li>
+                <i className="fa-solid fa-code"></i>{" "}
+                <span className="label">Leetcode:</span>{" "}
+                <a
+                  href="https://leetcode.com/u/malviyanayan/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="link"
+                >
+                  https://leetcode.com/u/malviyanayan/
+                </a>
+              </li>
+              <li>
+                <i class="fa-brands fa-instagram"></i>{" "}
+                <span className="label">Instagram:</span>{" "}
+                <a
+                  href="https://www.instagram.com/_btwitsnayan/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="link"
+                >
+                  https://www.instagram.com/_btwitsnayan/
+                </a>
+              </li>
+              <li>
+                <i class="fa-brands fa-youtube"></i>{" "}
+                <span className="label">YouTube:</span>{" "}
+                <a
+                  href="https://www.youtube.com/channel/UCLb1e0U-X-AdsLdcHiAvLnw"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="link"
+                >
+                  https://www.youtube.com/channel/UCLb1e0U-X-AdsLdcHiAvLnw
                 </a>
               </li>
             </ul>
