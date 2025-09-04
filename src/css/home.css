@@ -28,6 +28,10 @@
   font-weight: bold;
   /* background: linear-gradient(45deg, #ff6ec4, #7873f5); */
   background: linear-gradient(45deg, #ff512f, #dd2476);
+  /* background: linear-gradient(45deg, #ff512f, #dd2476, #ff6ec4, #43cea2); */
+  /* background-color: #fff; */
+  /* background: linear-gradient(45deg, #ff512f, #dd2476, #ff6ec4, #43cea2, #283e51); */
+  /* background: linear-gradient( #283e51, #21d4fd, #b721ff); */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 20px;

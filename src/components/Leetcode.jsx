@@ -11,7 +11,7 @@ export default function Leetcode() {
   return (
     <div className="leetcode-container">
       <FadeInOnScroll>
-        <h2 className="leetcode-title"> My Competitive Profile</h2>
+        <h2 className="section-title"> My Competitive Profile</h2>
       </FadeInOnScroll>
 
       <RotateUpOnScroll>

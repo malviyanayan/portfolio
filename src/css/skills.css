@@ -1,16 +1,32 @@
 /* ========== Skills Section Base ========== */
 .skills-section {
   padding: 80px 50px;
-  color: #e0e0e0;
   font-family: 'Segoe UI', sans-serif;
 }
 
+/* Theme colors */
+.skills-light {
+  color: #1a1a1a;
+}
+
+.skills-dark {
+  color: #e0e0e0;
+}
+
+/* Section Title */
 .section-title {
   font-size: 2.8rem;
-  color: #d3eaff;
   text-align: center;
   margin-bottom: 40px;
   position: relative;
+}
+
+.skills-light .section-title {
+  color: #1a1a1a;
+}
+
+.skills-dark .section-title {
+  color: #00f2fe;
 }
 
 .section-title::after {
@@ -43,12 +59,21 @@
 /* ========== Category Styling ========== */
 .skill-category h3 {
   font-size: 1.6rem;
-  color: #00f2fe;
   margin-bottom: 15px;
-  border-left: 4px solid #00f2fe;
+  border-left: 4px solid;
   padding-left: 12px;
   position: relative;
   animation: fadeInSlide 0.6s ease forwards;
+}
+
+.skills-light .skill-category h3 {
+  color: #1a1a1a;
+  border-color: #1a1a1a;
+}
+
+.skills-dark .skill-category h3 {
+  color: #00f2fe;
+  border-color: #00f2fe;
 }
 
 .skill-category ul {
@@ -60,40 +85,115 @@
 }
 
 .skill-category li {
-  /* background-color: #0f1827; */
   border-radius: 1px; 
   padding: 10px 18px;
   font-size: 1rem;
   display: flex;
   align-items: center;
-  color: #e0f7ff;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  /* box-shadow: 0 4px 12px rgba(0, 255, 255, 0.05); */
   min-width: 140px;
   cursor: pointer;
 }
 
-.skill-category li:hover {
-  transform: translateY(-5px) scale(1.03);
-  /* box-shadow: 0 8px 20px rgba(0, 255, 255, 0.2); */
-  /* background: linear-gradient(to right, #00f2fe, #4facfe); */
-  background-color: #0f1827;
-  /* color: #000; */
+.skills-light .skill-category li {
+  color: #1a1a1a;
+  border-color: rgba(0, 0, 0, 0.1);
 }
 
-/* ========== Icon Styling ========== */
+.skills-dark .skill-category li {
+  color: #e0e0e0;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.skill-category li:hover {
+  transform: translateY(-5px) scale(1.03);
+  background-color: rgba(0, 242, 254, 0.1);
+}
+
 .skill-category li img {
   width: 24px;
   height: 24px;
   margin-right: 10px;
   object-fit: contain;
-  /* filter: drop-shadow(0 0 2px #00f2fe); */
   transition: filter 0.3s ease;
 }
 
-.skill-category li:hover img {
-  filter: drop-shadow(0 0 5px #000);
+/* .skill-category li:hover img {
+  filter: drop-shadow(0 0 5px #00f2fe);
+} */
+
+/* ========== Fun Explored Box ========== */
+.fun-explored-box {
+  margin-top: 60px;
+  padding: 30px 40px;
+  animation: fadeInSlide 0.6s ease forwards;
+}
+
+.fun-explored-box h3 {
+  font-size: 1.6rem;
+  margin-bottom: 25px;
+  border-left: 4px solid;
+  padding-left: 12px;
+  position: relative;
+}
+
+.skills-light .fun-explored-box h3 {
+  color: #1a1a1a;
+  border-color: #1a1a1a;
+}
+
+.skills-dark .fun-explored-box h3 {
+  color: #00f2fe;
+  border-color: #00f2fe;
+}
+
+.fun-explored-box ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.fun-explored-box li {
+  border-radius: 1px;
+  padding: 10px 18px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  min-width: 140px;
+  cursor: pointer;
+}
+
+.skills-light .fun-explored-box li {
+  color: #1a1a1a;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.skills-dark .fun-explored-box li {
+  color: #e0e0e0;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.fun-explored-box li:hover {
+  transform: translateY(-5px) scale(1.03);
+  background-color: rgba(0, 242, 254, 0.1);
+}
+
+.fun-explored-box li img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  object-fit: contain;
+  transition: filter 0.3s ease;
+}
+
+.fun-explored-box li:hover img {
+  filter: drop-shadow(0 0 5px #00f2fe);
 }
 
 /* ========== Responsive Design ========== */
@@ -103,7 +203,8 @@
     gap: 60px;
   }
 
-  .skill-category li {
+  .skill-category li,
+  .fun-explored-box li {
     min-width: 120px;
     font-size: 0.95rem;
     padding: 10px 14px;
@@ -115,11 +216,13 @@
     font-size: 2.2rem;
   }
 
-  .skill-category h3 {
+  .skill-category h3,
+  .fun-explored-box h3 {
     font-size: 1.3rem;
   }
 
-  .skill-category li img {
+  .skill-category li img,
+  .fun-explored-box li img {
     width: 20px;
     height: 20px;
   }
@@ -145,92 +248,5 @@
   100% {
     opacity: 1;
     transform: translateX(0);
-  }
-}
-
-
-
-
-
-
-/* Just for fun */
-.fun-explored-box {
-  margin-top: 60px;
-  padding: 30px 40px;
-  /* background-color: #0f1827; */
-  /* border-radius: 20px; */
-  /* border: 1px solid rgba(255, 255, 255, 0.05); */
-  /* box-shadow: 0 4px 20px rgba(0, 255, 255, 0.06); */
-  animation: fadeInSlide 0.6s ease forwards;
-}
-
-.fun-explored-box h3 {
-  font-size: 1.6rem;
-  color: #00f2fe;
-  margin-bottom: 25px;
-  border-left: 4px solid #00f2fe;
-  padding-left: 12px;
-  position: relative;
-}
-
-.fun-explored-box ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  padding-left: 0;
-  list-style: none;
-  margin: 0;
-}
-
-.fun-explored-box li {
-  /* background-color: #0f1827; */
-  border-radius: 1px;
-  padding: 10px 18px;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  color: #e0f7ff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  /* box-shadow: 0 4px 12px rgba(0, 255, 255, 0.05); */
-  min-width: 140px;
-  cursor: pointer;
-}
-
-.fun-explored-box li:hover {
-  transform: translateY(-5px) scale(1.03);
-  /* box-shadow: 0 8px 20px rgba(0, 255, 255, 0.2); */
-  /* background: linear-gradient(to right, #00f2fe, #4facfe); */
-  background-color: #0f1827;
-  /* color: #000; */
-}
-
-.fun-explored-box li img {
-  width: 24px;
-  height: 24px;
-  margin-right: 10px;
-  object-fit: contain;
-  transition: filter 0.3s ease;
-}
-
-.fun-explored-box li:hover img {
-  filter: drop-shadow(0 0 5px #000);
-}
-
-/* Responsive (inherits from above, but in case you want finer control) */
-@media screen and (max-width: 600px) {
-  .fun-explored-box h3 {
-    font-size: 1.3rem;
-  }
-
-  .fun-explored-box li {
-    min-width: 120px;
-    font-size: 0.95rem;
-    padding: 10px 14px;
-  }
-
-  .fun-explored-box li img {
-    width: 20px;
-    height: 20px;
   }
 }

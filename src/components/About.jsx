@@ -105,7 +105,7 @@ const About = () => {
                   <i className="fab fa-linkedin"></i>{" "}
                   <span className="label">LinkedIn:</span>{" "}
                   <a
-                    href="https://linkedin.com/in/nayan-malviya"
+                    href="https://www.linkedin.com/in/nayanmalviya/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="link"
@@ -116,11 +116,11 @@ const About = () => {
               </FadeInOnScroll>
 
               <FadeInOnScroll>
-                <li>
+                <li className="text-truncate">
                   <i className="fab fa-github"></i>{" "}
                   <span className="label">GitHub:</span>{" "}
                   <a
-                    href="https://github.com/nayanmalviya"
+                    href="https://github.com/malviyanayan"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="link"

@@ -2,8 +2,11 @@ import React from "react";
 import ProjectCard from "./ProjectCard";
 import "../css/projects.css";
 import FadeInOnScroll from "./animation/FadeInOnScroll";
+import { useSelector } from "react-redux";
 
 export default function Projects() {
+  const theme = useSelector((state) => state.theme.value); // true = light, false = dark
+
   const projects = [
     {
       title: "E Learning Plateform",
@@ -52,28 +55,28 @@ export default function Projects() {
 
   return (
     <section
-      className="projects-section"
+      className={`projects-section ${theme ? "projects-light" : "projects-dark"}`}
       id="projects"
-      style={{
-        backgroundColor:
-          "background: radial-gradient(ellipse at bottom, #0d1b2a 0%, #000000 100%);",
-      }}
     >
       <h2 className="section-title">Projects</h2>
       <div className="projects-grid">
         {projects.map((proj, index) => (
-          <ProjectCard key={index} project={proj} />
+          <ProjectCard key={index} project={proj} theme={theme} />
         ))}
       </div>
 
-      {/* <FadeInOnScroll>
-        <div className="more-btn-container">
-        <button className="more-btn">More Projects ...</button>
-      </div>
-      </FadeInOnScroll> */}
+      <FadeInOnScroll>
+        <div className="right-btn-container">
+          <button className={`right-btn ${theme ? "btn-light-mode" : "btn-dark-mode"}`}>
+            More Projects...
+          </button>
+        </div>
+      </FadeInOnScroll>
     </section>
   );
 }
+
+
 
 // ,
 //     {

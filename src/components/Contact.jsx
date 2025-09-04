@@ -28,7 +28,7 @@ const Contact = () => {
 
 return (
     <section
-        id="contact"
+        id="contact-me"
         className="contact-section d-flex align-items-center justify-content-center"
     >
         <div className="container">

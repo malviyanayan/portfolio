@@ -1,9 +1,12 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import SkillCategory from "./SkillCategory";
 import "../css/skills.css";
 import FadeInOnScroll from "./animation/FadeInOnScroll";
 
 export default function Skills() {
+  const theme = useSelector((state) => state.theme.value); // true = light, false = dark
+
   const leftSkills = [
     {
       title: "Programming Skills",
@@ -81,7 +84,10 @@ export default function Skills() {
   ];
 
   return (
-    <section className="skills-section" id="skills">
+    <section
+      className={`skills-section ${theme ? "skills-light" : "skills-dark"}`}
+      id="skills"
+    >
       <FadeInOnScroll>
         <h2 className="section-title">Skills</h2>
       </FadeInOnScroll>
@@ -93,6 +99,7 @@ export default function Skills() {
               key={category.title}
               title={category.title}
               skills={category.skills}
+              theme={theme} // pass theme for child styling
             />
           ))}
         </div>
@@ -103,6 +110,7 @@ export default function Skills() {
               key={category.title}
               title={category.title}
               skills={category.skills}
+              theme={theme} // pass theme for child styling
             />
           ))}
         </div>
@@ -114,10 +122,10 @@ export default function Skills() {
         </FadeInOnScroll>
         <ul>
           {funSkills.map((skill) => (
-            <FadeInOnScroll>
-              <li key={skill.name}>
-              <img src={skill.img} alt={skill.name} /> {skill.name}
-            </li>
+            <FadeInOnScroll key={skill.name}>
+              <li>
+                <img src={skill.img} alt={skill.name} /> {skill.name}
+              </li>
             </FadeInOnScroll>
           ))}
         </ul>

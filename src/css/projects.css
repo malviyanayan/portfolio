@@ -1,8 +1,20 @@
 /* projects.css */
 
+/* Base Section */
 .projects-section {
   padding: 60px 20px;
   background: transparent;
+  color: #fff;
+}
+
+/* Theme-aware backgrounds */
+.projects-light {
+  /* background: linear-gradient(to bottom, #ffffff, #f8f9fa); */
+  color: #1a1a1a;
+}
+
+.projects-dark {
+  /* background: radial-gradient(ellipse at bottom, #0d1b2a 0%, #000000 100%); */
   color: #fff;
 }
 
@@ -10,8 +22,16 @@
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 40px;
-  color: #00f2fe;
   position: relative;
+}
+
+/* Theme-aware section title */
+.projects-light .section-title {
+  color: #1a1a1a;
+}
+
+.projects-dark .section-title {
+  color: #00f2fe;
 }
 
 .projects-grid {
@@ -23,55 +43,85 @@
   margin: auto;
 }
 
-/* Individual Project Card Style - temporary placeholder, update ProjectCard.js later */
+/* Individual Project Card */
 .project-card {
-  /* background: rgba(255, 255, 255, 0.05); */
   backdrop-filter: blur(10px);
   border-radius: 6px;
   overflow: hidden;
-  /* padding: 20px; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  /* box-shadow: 0 0 20px rgba(0, 242, 254, 0.15); */
   border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Light/Dark project card backgrounds */
+.projects-light .project-card {
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #1a1a1a;
+}
+
+.projects-dark .project-card {
+  background-color: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
 }
 
 .project-card:hover {
   transform: translateY(-8px);
-  /* box-shadow: 0 0 30px rgba(0, 242, 254, 0.3); */
 }
 
 .project-image {
   width: 100%;
   height: 180px;
   object-fit: cover;
-  /* border-radius: 15px; */
-  /* margin-bottom: 20px; */
 }
 
 .project-title {
   font-size: 1.6rem;
   font-weight: 600;
-  margin-bottom: 10px;
-  color: #00f2fe;
   margin: 10px;
+}
+
+/* Theme-aware title */
+.projects-light .project-title {
+  color: #1a1a1a;
+}
+
+.projects-dark .project-title {
+  color: #00f2fe;
 }
 
 .project-subtitle {
   font-size: 1rem;
   font-style: italic;
-  color: #ccc;
   margin: 10px;
   margin-bottom: 12px;
 }
 
+/* Theme-aware subtitle */
+.projects-light .project-subtitle {
+  color: #555;
+}
+
+.projects-dark .project-subtitle {
+  color: #ccc;
+}
+
 .project-description {
   font-size: 0.95rem;
-  color: #e0e0e0;
   flex-grow: 1;
   margin-bottom: 20px;
+}
+
+/* Theme-aware description */
+.projects-light .project-description {
+  color: #333;
+}
+
+.projects-dark .project-description {
+  color: #e0e0e0;
 }
 
 .project-buttons {
@@ -84,18 +134,28 @@
 
 .project-buttons .btn {
   background-color: transparent;
-  color: #00f2fe;
-  border: 1px solid #00f2fe;
+  border: 1px solid currentColor;
   padding: 8px 16px;
-  /* border-radius: 25px; */
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
 
+/* Light/Dark buttons */
+.projects-light .project-buttons .btn {
+  color: #1a1a1a;
+  border-color: #1a1a1a;
+}
+
+.projects-dark .project-buttons .btn {
+  color: #00f2fe;
+  border-color: #00f2fe;
+}
+
 .project-buttons .btn:hover {
-  background-color: #00f2fe;
-  color: #000;
+  background-color: #1abc9c;
+  color: #fff;
+  border-color: #1abc9c;
 }
 
 /* Responsive spacing for small screens */
@@ -109,49 +169,56 @@
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-.more-btn-container {
-  text-align: center;
-  margin-top: 50px;
+/* More Projects Button */
+.right-btn-container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 40px 0;
+  padding-right: 30px;
 }
 
-.more-btn {
-  background-color: transparent;
-  color: #00f2fe;
-  border: 1px solid #00f2fe;
-  padding: 10px 24px;
+.right-btn {
+  background: transparent;
+  border: 2px solid currentColor;
+  padding: 12px 28px;
   font-size: 1rem;
   font-weight: 500;
+  border-radius: 50px;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.4s ease;
 }
 
-.more-btn:hover {
-  background-color: #00f2fe;
-  color: #000;
-} */
+/* Light/Dark right button colors */
+.projects-light .right-btn {
+  color: #1a1a1a;
+  border-color: #1a1a1a;
+}
+
+.projects-dark .right-btn {
+  color: #00f2fe;
+  border-color: #00f2fe;
+}
+
+.right-btn::before {
+  content: '';
+  position: absolute;
+  left: -50%;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(0, 242, 254, 0.2);
+  transform: skewX(-20deg);
+  transition: all 0.4s ease;
+}
+
+.right-btn:hover::before {
+  left: 100%;
+}
+
+.right-btn:hover {
+  background: #1abc9c;
+  color: #fff;
+  border-color: #1abc9c;
+}

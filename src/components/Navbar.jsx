@@ -3,8 +3,6 @@ import "../css/navbar.css";
 import { changeTheme } from "../features/theme/themeSlice";
 import { useDispatch, useSelector } from "react-redux";
 import FadeInOnScroll from "./animation/FadeInOnScroll";
-import ScrollFromLeft from "./animation/ScrollFromLeft";
-import ScrollFromRight from "./animation/ScrollFromRight";
 
 const Navbar = () => {
   const menuRef = useRef(null);
@@ -42,10 +40,10 @@ const Navbar = () => {
               About
             </a>
             <a
-              href="#project"
+              href="#projects"
               className={`${theme ? "link-light" : "link-dark"}`}
             >
-              Project
+              Projects
             </a>
             <a
               href="#skills"
@@ -140,7 +138,7 @@ const Navbar = () => {
               {/* LinkedIn */}
               <FadeInOnScroll>
                 <a
-                  href="https://www.linkedin.com/in/your-profile"
+                  href="https://www.linkedin.com/in/nayanmalviya/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -151,7 +149,7 @@ const Navbar = () => {
               {/* GitHub */}
               <FadeInOnScroll>
                 <a
-                  href="https://github.com/your-username"
+                  href="https://github.com/malviyanayan"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -162,7 +160,7 @@ const Navbar = () => {
               {/* LeetCode */}
               <FadeInOnScroll>
                 <a
-                  href="https://leetcode.com/your-username"
+                  href="https://leetcode.com/u/malviyanayan"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -171,18 +169,18 @@ const Navbar = () => {
               </FadeInOnScroll>
 
               {/* X (Twitter) */}
-              <a
+              {/* <a
                 href="https://twitter.com/your-handle"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <i className="fab fa-x-twitter"></i>
-              </a>
+              </a> */}
             </div>
 
             <div className="action-buttons">
               <FadeInOnScroll>
-                <button
+                <button onClick={() => window.open('https://drive.google.com/file/d/1-XNYsdXUf861wGJvqhNYMAkTxuFAC1JC/view?usp=sharing', '_blank')}
                   className={`custom-btn ${
                     theme ? "btn-light-mode" : "btn-dark-mode"
                   }`}
@@ -194,7 +192,7 @@ const Navbar = () => {
                 <button
                   className={`custom-btn ${
                     theme ? "btn-light-mode" : "btn-dark-mode"
-                  }`}
+                  }`} onClick={() => window.location.href = '#contact-me'}
                 >
                   Contact Me
                 </button>
@@ -226,12 +224,12 @@ const Navbar = () => {
 
               <FadeInOnScroll>
                 <a
-                href="#project"
+                href="#projects"
                 className={`sidebar-link ${
                   theme ? "sidebar-link-light" : "sidebar-link-dark"
                 }`}
               >
-                <i className="fas fa-laptop-code me-2"></i> Project
+                <i className="fas fa-laptop-code me-2"></i> Projects
               </a>
               </FadeInOnScroll>
               

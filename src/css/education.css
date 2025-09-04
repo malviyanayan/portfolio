@@ -1,30 +1,49 @@
+/* ========================
+   Education Title Styling
+======================== */
 .education-section-title {
-  text-align: left;
-  margin: 60px auto 30px;
+  text-align: center;
+  margin: 70px auto 40px;
   max-width: 900px;
-}
-
-.education-bar {
-  width: 50px;
-  height: 8px;
-  background-color: #00f0ff;
-  border-radius: 10px;
-  margin-bottom: 10px;
+  position: relative;
 }
 
 .education-section-title h2 {
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: #00e1ff;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #00f2fe;
   margin: 0;
+  position: relative;
+  display: inline-block;
+}
+
+/* Underline animation */
+.education-section-title h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -12px;
+  transform: translateX(-50%);
+  width: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #00f2fe, #00ffff);
+  border-radius: 2px;
+  transition: width 0.6s ease;
+}
+
+.education-section-title h2:hover::after {
+  width: 70%;
 }
 
 .education-section-title p {
   color: #66cbd8;
-  font-size: 1rem;
-  margin-top: 5px;
+  font-size: 1.1rem;
+  margin-top: 18px;
 }
 
+/* ========================
+   Timeline Styling
+======================== */
 .education-timeline {
   max-width: 900px;
   margin: 50px auto;
@@ -122,8 +141,22 @@
   line-height: 1.6;
 }
 
-/* Responsive */
+/* ========================
+   Responsive
+======================== */
 @media (max-width: 768px) {
+  .education-section-title h2 {
+    font-size: 2rem;
+  }
+
+  .education-section-title h2:hover::after {
+    width: 90%;
+  }
+
+  .education-section-title p {
+    font-size: 0.95rem;
+  }
+
   .education-timeline::before {
     left: 8px;
   }

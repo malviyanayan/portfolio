@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../css/home.css";
 import ScrollFromRight from "./animation/ScrollFromRight";
 import FadeInOnScroll from "./animation/FadeInOnScroll";
+import {useSelector } from "react-redux";
 
 const titles = [
   "Full Stack Developer",
@@ -13,6 +14,9 @@ const titles = [
 const Home = () => {
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
+
+  let theme = useSelector((state) => state.theme.value); // Accessing the theme state
+
   const [forward, setForward] = useState(true);
 
   useEffect(() => {
@@ -34,10 +38,10 @@ const Home = () => {
   }, [subIndex, forward, index]);
 
   return (
-    <div className="home">
+    <div className="home" id="home">
       <div className="home-left">
         <FadeInOnScroll>
-          <h2>Hi There!</h2>
+          <h2 className={"jl"}>Hi There!</h2>
         </FadeInOnScroll>
         <FadeInOnScroll>
           <h1>I'M NAYAN MALVIYA</h1>
