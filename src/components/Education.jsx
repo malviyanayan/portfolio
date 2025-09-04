@@ -1,7 +1,10 @@
 import "../css/education.css";
 import FadeInOnScroll from "./animation/FadeInOnScroll";
+import { useSelector } from "react-redux";
 
 const Education = () => {
+  const theme = useSelector((state) => state.theme.value); // true = light, false = dark
+
   const educationData = [
     {
       title: "Bachelor of Technology in CSE",
@@ -27,22 +30,24 @@ const Education = () => {
   ];
 
   return (
-    <>
+    <div
+      className={`education-wrapper ${
+        theme ? "education-light" : "education-dark"
+      }`}
+    >
+      {/* Title */}
       <FadeInOnScroll>
         <div className="education-section-title">
-  <h2 className="section-title">Education</h2>
-  <p>Currently – Undergraduate</p>
-</div>
-
+          <h2 className="section-title">Education</h2>
+          <p>Currently – Undergraduate</p>
+        </div>
       </FadeInOnScroll>
 
+      {/* Timeline */}
       <section className="education-timeline">
         {educationData.map((edu, index) => (
-          <FadeInOnScroll>
-            <div
-              className={`education-timeline-item ${edu.position}`}
-              key={index}
-            >
+          <FadeInOnScroll key={index}>
+            <div className={`education-timeline-item ${edu.position}`}>
               <div className="education-card">
                 <h3>{edu.title}</h3>
                 <span>{edu.duration}</span>
@@ -56,7 +61,7 @@ const Education = () => {
           </FadeInOnScroll>
         ))}
       </section>
-    </>
+    </div>
   );
 };
 

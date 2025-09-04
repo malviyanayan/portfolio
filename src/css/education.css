@@ -11,7 +11,6 @@
 .education-section-title h2 {
   font-size: 2.8rem;
   font-weight: 700;
-  color: #00f2fe;
   margin: 0;
   position: relative;
   display: inline-block;
@@ -26,7 +25,6 @@
   transform: translateX(-50%);
   width: 0;
   height: 4px;
-  background: linear-gradient(90deg, #00f2fe, #00ffff);
   border-radius: 2px;
   transition: width 0.6s ease;
 }
@@ -36,7 +34,6 @@
 }
 
 .education-section-title p {
-  color: #66cbd8;
   font-size: 1.1rem;
   margin-top: 18px;
 }
@@ -52,14 +49,14 @@
 }
 
 .education-timeline::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   top: 0;
   bottom: 0;
   width: 3px;
-  background: #00f0ff;
   transform: translateX(-50%);
+  z-index: 0;
 }
 
 .education-timeline-item {
@@ -80,14 +77,13 @@
 }
 
 .education-timeline-item::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 30px;
   width: 15px;
   height: 15px;
-  background: #00f0ff;
   border-radius: 50%;
-  z-index: 1;
+  z-index: 2;
 }
 
 .education-timeline-item.left::before {
@@ -99,46 +95,117 @@
 }
 
 .education-card {
+  padding: 25px 30px;
+  border-radius: 12px;
+  border: 1px solid;
+  backdrop-filter: blur(8px);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.education-card:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+
+/* ========================
+   Light Theme
+======================== */
+.education-light .section-title {
+  color: #0077b6;
+}
+
+.education-light .section-title::after {
+  background: linear-gradient(90deg, #0077b6, #00b4d8);
+}
+
+.education-light .education-section-title p {
+  color: #495057;
+}
+
+.education-light .education-timeline::before {
+  background: #00b4d8;
+}
+
+.education-light .education-timeline-item::before {
+  background: #00b4d8;
+  border: 2px solid #fff;
+}
+
+.education-light .education-card {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 180, 216, 0.08),
+    rgba(255, 255, 255, 0.6)
+  );
+  border-color: rgba(0, 180, 216, 0.3);
+  box-shadow: 0 6px 20px rgba(0, 180, 216, 0.15);
+}
+
+.education-light .education-card:hover {
+  box-shadow: 0 12px 30px rgba(0, 180, 216, 0.3);
+}
+
+.education-light .education-card h3 {
+  color: #0077b6;
+}
+
+.education-light .education-card span {
+  color: #555;
+}
+
+.education-light .education-card p {
+  color: #333;
+}
+
+/* ========================
+   Dark Theme
+======================== */
+.education-dark .section-title {
+  color: #00f2fe;
+}
+
+.education-dark .section-title::after {
+  background: linear-gradient(90deg, #00f2fe, #00ffff);
+}
+
+.education-dark .education-section-title p {
+  color: #66cbd8;
+}
+
+.education-dark .education-timeline::before {
+  background: #00f0ff;
+}
+
+.education-dark .education-timeline-item::before {
+  background: #00f0ff;
+  border: 2px solid #0d1b2a;
+}
+
+.education-dark .education-card {
   background: linear-gradient(
     135deg,
     rgba(0, 242, 255, 0.05),
     rgba(255, 255, 255, 0.01)
   );
-  padding: 25px 30px;
-  border-radius: 12px;
-  border: 1px solid rgba(0, 242, 255, 0.15);
+  border-color: rgba(0, 242, 255, 0.15);
   box-shadow: 0 6px 25px rgba(0, 242, 255, 0.08);
-  backdrop-filter: blur(8px);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-  position: relative;
-  z-index: 2;
 }
 
-.education-card:hover {
-  transform: translateY(-6px) scale(1.02);
+.education-dark .education-card:hover {
   box-shadow: 0 12px 30px rgba(0, 242, 255, 0.2);
 }
 
-.education-card h3 {
-  margin-top: 0;
-  margin-bottom: 8px;
-  font-size: 1.3rem;
+.education-dark .education-card h3 {
   color: #00f0ff;
-  font-weight: 600;
 }
 
-.education-card span {
-  display: block;
-  font-size: 0.95rem;
+.education-dark .education-card span {
   color: #a7f1f8;
-  margin-bottom: 10px;
 }
 
-.education-card p {
-  margin: 0;
-  font-size: 0.95rem;
+.education-dark .education-card p {
   color: #e0f7ff;
-  line-height: 1.6;
 }
 
 /* ========================
@@ -174,6 +241,6 @@
   }
 
   .education-timeline-item::before {
-    left: 0;
+    left: -15px;
   }
 }

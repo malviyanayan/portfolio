@@ -26,9 +26,11 @@
 .home-left h1 {
   font-size: 3.2rem;
   font-weight: bold;
+  /* color: #0077ff; */
   /* background: linear-gradient(45deg, #ff6ec4, #7873f5); */
-  background: linear-gradient(45deg, #ff512f, #dd2476);
-  /* background: linear-gradient(45deg, #ff512f, #dd2476, #ff6ec4, #43cea2); */
+  /* background: linear-gradient(45deg, #ff512f, #dd2476); */
+  background: linear-gradient(45deg, #ff512f, #dd2476, #ff6ec4, #43cea2);
+  /* background: linear-gradient(90deg, #0077ff 0%, #00ffd5 100%); */
   /* background-color: #fff; */
   /* background: linear-gradient(45deg, #ff512f, #dd2476, #ff6ec4, #43cea2, #283e51); */
   /* background: linear-gradient( #283e51, #21d4fd, #b721ff); */
@@ -132,7 +134,7 @@
   border-radius: 12px;
   z-index: 0;
   position: relative;
-  box-shadow: 0 0 15px rgba(0, 255, 213, 0.3);
+  /* box-shadow: 0 0 15px rgba(0, 255, 213, 0.3); */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -140,7 +142,8 @@
 
 .profile-image:hover {
   transform: scale(1.03);
-  box-shadow: 0 0 25px rgba(0, 255, 213, 0.5);
+  /* box-shadow: 0 0 25px rgba(0, 255, 213, 0.5); */
+  box-shadow: 0 0 25px rgba(80, 82, 82, 0.5);
 }
 
 /* Corner Boxes */

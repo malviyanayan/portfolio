@@ -41,22 +41,22 @@ const Home = () => {
     <div className="home" id="home">
       <div className="home-left">
         <FadeInOnScroll>
-          <h2 className={"jl"}>Hi There!</h2>
+          <h2 className={`${theme ? 'tc-light' : ''}`}>Hi There!</h2>
         </FadeInOnScroll>
         <FadeInOnScroll>
           <h1>I'M NAYAN MALVIYA</h1>
         </FadeInOnScroll>
         <FadeInOnScroll>
-          <div className="im-changing">
+          <div className={`im-changing ${theme ? 'logo-light' : 'logo-dark'}`}>
           {titles[index].substring(0, subIndex)}
-          <span className="cursor">|</span>
+          <span className={`cursor ${theme ? 'logo-light' : 'logo-dark'}`}>|</span>
         </div>
         </FadeInOnScroll>
       </div>
 
       <div className="home-right position-relative">
-        <div className="corner-box top-left-box"></div>
-        <div className="corner-box bottom-right-box"></div>
+        <div className={`corner-box top-left-box ${theme ? 'img-border-light' : 'img-border-dark'}`}></div>
+        <div className={`corner-box bottom-right-box ${theme ? 'img-border-light' : 'img-border-dark'}`}></div>
 
         <ScrollFromRight>
           <img

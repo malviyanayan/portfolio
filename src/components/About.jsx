@@ -1,10 +1,70 @@
 import React from "react";
 import "../css/about.css";
 import FadeInOnScroll from "./animation/FadeInOnScroll";
+import { useSelector } from "react-redux";
 
 const About = () => {
+  const theme = useSelector((state) => state.theme.value); // true = light, false = dark
+
+  const contactInfo = [
+    { icon: "fas fa-map-marker-alt", label: "Address", value: "Adhartal, Jabalpur" },
+    { icon: "fas fa-envelope", label: "Email", value: "naymalviya@gmail.com" },
+    { icon: "fas fa-phone", label: "Phone", value: "+91-7828186628" },
+    {
+      icon: "fab fa-linkedin",
+      label: "LinkedIn",
+      value: "linkedin.com/in/nayan-malviya",
+      link: "https://www.linkedin.com/in/nayanmalviya/",
+    },
+    {
+      icon: "fab fa-github",
+      label: "GitHub",
+      value: "github.com/nayanmalviya",
+      link: "https://github.com/malviyanayan",
+    },
+    {
+      icon: "fa-solid fa-code",
+      label: "Leetcode",
+      value: "leetcode.com/u/malviyanayan/",
+      link: "https://leetcode.com/u/malviyanayan/",
+    },
+    {
+      icon: "fa-brands fa-instagram",
+      label: "Instagram",
+      value: "_btwitsnayan",
+      link: "https://www.instagram.com/_btwitsnayan/",
+    },
+    {
+      icon: "fa-brands fa-youtube",
+      label: "YouTube",
+      value: "Nayan Malviya",
+      link: "https://www.youtube.com/channel/UCLb1e0U-X-AdsLdcHiAvLnw",
+    },
+  ];
+
+  const textParagraphs = [
+    <>
+      <span className="highlight">Hi</span>, I'm <strong>Nayan Malviya</strong> – an <strong>Aspiring Software Engineer</strong> and final-year <strong>B.Tech student at BGIEM Jabalpur</strong>.
+    </>,
+    <>
+      I specialize in building full-stack web applications using <span className="tech">React.js</span>, <span className="tech">Spring Boot</span>, <span className="tech">Spring Security</span>, <span className="tech">Hibernate</span>, and <span className="tech">MySQL</span>. I also have strong knowledge of <span className="tech">Advanced Java</span>, which helps me understand how <strong>Spring Boot</strong> and <strong>Spring applications</strong> work internally.
+    </>,
+    <>
+      With a solid foundation in <strong>Data Structures and Algorithms</strong>, I have solved <strong>270+ coding problems</strong>, continuously sharpening my problem-solving skills. I am passionate about creating <strong>scalable applications</strong>, writing <strong>clean code</strong>, and designing <strong>modern UIs</strong>.
+    </>,
+    <>
+      Currently, I’m looking for an <strong>internship opportunity</strong> where I can apply my knowledge, contribute to impactful projects, and gain real-world experience.
+    </>,
+    <>
+      Check out my <a href="#projects" className="link">Projects</a> to see what I’ve been working on. Feel free to connect with me for collaborations or opportunities!
+    </>,
+    <>
+      <em>Thank you for visiting!</em>
+    </>,
+  ];
+
   return (
-    <div id="about" className="about-section">
+    <div id="about" className={`about-section ${theme ? "light-theme" : "dark-theme"}`}>
       <div className="container">
         {/* Heading */}
         <FadeInOnScroll>
@@ -14,166 +74,31 @@ const About = () => {
         <div className="row about-content">
           {/* Left Column */}
           <div className="col-md-7 about-text">
-            <FadeInOnScroll>
-              <p>
-                <span className="highlight">Hi</span>, I'm{" "}
-                <strong>Nayan Malviya</strong> – an{" "}
-                <strong>Aspiring Software Engineer</strong> and final-year{" "}
-                <strong>B.Tech student at BGIEM Jabalpur</strong>.
-              </p>
-            </FadeInOnScroll>
-
-            <FadeInOnScroll>
-              <p>
-                I specialize in building full-stack web applications using{" "}
-                <span className="tech">React.js</span>,{" "}
-                <span className="tech">Spring Boot</span>,{" "}
-                <span className="tech">Spring Security</span>,{" "}
-                <span className="tech">Hibernate</span>, and{" "}
-                <span className="tech">MySQL</span>. I also have strong
-                knowledge of <span className="tech">Advanced Java</span>, which
-                helps me understand how <strong>Spring Boot</strong> and{" "}
-                <strong>Spring applications</strong> work internally.
-              </p>
-            </FadeInOnScroll>
-
-            <FadeInOnScroll>
-              <p>
-                With a solid foundation in{" "}
-                <strong>Data Structures and Algorithms</strong>, I have solved{" "}
-                <strong>270+ coding problems</strong>, which continuously
-                sharpens my problem-solving skills. I am passionate about
-                creating <strong>scalable applications</strong>, writing{" "}
-                <strong>clean code</strong>, and designing{" "}
-                <strong>modern UIs</strong>.
-              </p>
-            </FadeInOnScroll>
-
-            <FadeInOnScroll>
-              <p>
-                Currently, I’m looking for an{" "}
-                <strong>internship opportunity</strong> where I can apply my
-                knowledge, contribute to impactful projects, and gain real-world
-                experience.
-              </p>
-            </FadeInOnScroll>
-
-            <FadeInOnScroll>
-              <p>
-                Check out my{" "}
-                <a href="#projects" className="link">
-                  Projects
-                </a>{" "}
-                to see what I’ve been working on. Feel free to connect with me
-                for collaborations or opportunities!
-              </p>
-            </FadeInOnScroll>
-
-            <FadeInOnScroll>
-              <p>
-                <em>Thank you for visiting!</em>
-              </p>
-            </FadeInOnScroll>
+            {textParagraphs.map((paragraph, idx) => (
+              <FadeInOnScroll key={idx}>
+                <p>{paragraph}</p>
+              </FadeInOnScroll>
+            ))}
           </div>
 
           {/* Right Column */}
           <div className="col-md-5 about-contact">
             <ul className="list-unstyled contact-list">
-              <FadeInOnScroll>
-                <li>
-                  <i className="fas fa-map-marker-alt"></i>{" "}
-                  <span className="label">Address:</span> Adhartal, Jabalpur
-                </li>
-              </FadeInOnScroll>
-
-              <FadeInOnScroll>
-                <li>
-                  <i className="fas fa-envelope"></i>{" "}
-                  <span className="label">Email:</span> naymalviya@gmail.com
-                </li>
-              </FadeInOnScroll>
-
-              <FadeInOnScroll>
-                <li>
-                  <i className="fas fa-phone"></i>{" "}
-                  <span className="label">Phone:</span> +91-7828186628
-                </li>
-              </FadeInOnScroll>
-
-              <FadeInOnScroll>
-                <li>
-                  <i className="fab fa-linkedin"></i>{" "}
-                  <span className="label">LinkedIn:</span>{" "}
-                  <a
-                    href="https://www.linkedin.com/in/nayanmalviya/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="link"
-                  >
-                    linkedin.com/in/nayan-malviya
-                  </a>
-                </li>
-              </FadeInOnScroll>
-
-              <FadeInOnScroll>
-                <li className="text-truncate">
-                  <i className="fab fa-github"></i>{" "}
-                  <span className="label">GitHub:</span>{" "}
-                  <a
-                    href="https://github.com/malviyanayan"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="link"
-                  >
-                    github.com/nayanmalviya
-                  </a>
-                </li>
-              </FadeInOnScroll>
-
-              <FadeInOnScroll>
-                <li>
-                  <i className="fa-solid fa-code"></i>{" "}
-                  <span className="label">Leetcode:</span>{" "}
-                  <a
-                    href="https://leetcode.com/u/malviyanayan/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="link"
-                  >
-                    https://leetcode.com/u/malviyanayan/
-                  </a>
-                </li>
-              </FadeInOnScroll>
-
-              <FadeInOnScroll>
-                <li className="text-truncate">
-                  <i class="fa-brands fa-instagram"></i>{" "}
-                  <span className="label">Instagram:</span>{" "}
-                  <a
-                    href="https://www.instagram.com/_btwitsnayan/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="link"
-                  >
-                    https://www.instagram.com/_btwitsnayan/
-                  </a>
-                </li>
-              </FadeInOnScroll>
-
-              <FadeInOnScroll>
-                <li className="text-truncate">
-                  <i class="fa-brands fa-youtube"></i>{" "}
-                  <span className="label">YouTube:</span>{" "}
-                  <a
-                    href="https://www.youtube.com/channel/UCLb1e0U-X-AdsLdcHiAvLnw"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="link"
-                  >
-                    https://www.youtube.com/channel/UCLb1e0U-X-AdsLdcHiAvLnw
-                  </a>
-                </li>
-              </FadeInOnScroll>
+              {contactInfo.map((item, idx) => (
+                <FadeInOnScroll key={idx}>
+                  <li className="text-truncate">
+                    <i className={item.icon}></i>{" "}
+                    <span className="label">{item.label}:</span>{" "}
+                    {item.link ? (
+                      <a href={item.link} target="_blank" rel="noopener noreferrer" className="link">
+                        {item.value}
+                      </a>
+                    ) : (
+                      item.value
+                    )}
+                  </li>
+                </FadeInOnScroll>
+              ))}
             </ul>
           </div>
         </div>

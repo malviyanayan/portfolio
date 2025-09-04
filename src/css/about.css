@@ -11,10 +11,103 @@
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 50px;
-  color: #00f2fe;
   position: relative;
+  transition: color 0.3s ease;
 }
 
+/* ========================
+   Light Theme
+======================== */
+.light-theme {
+  /* background: #f5f5f5; */
+  color: #1a1a1a;
+}
+
+.light-theme .section-title {
+  color: #1a1a1a;
+}
+
+.light-theme .highlight {
+  color: #0077ff;
+}
+
+.light-theme .tech {
+  color: #0077ff;
+}
+
+.light-theme strong {
+  color: #1a1a1a;
+}
+
+.light-theme .link {
+  color: #0077ff;
+}
+
+.light-theme .link:hover {
+  color: #00aaff;
+  text-decoration: underline;
+}
+
+.light-theme .about-contact .contact-list li {
+  color: #1a1a1a;
+}
+
+.light-theme .about-contact .contact-list i {
+  color: #0077ff;
+}
+
+.light-theme .about-contact .label {
+  color: #333;
+}
+
+/* ========================
+   Dark Theme
+======================== */
+.dark-theme {
+  /* background: #0d1b2a; */
+  color: #e0f7ff;
+}
+
+.dark-theme .section-title {
+  color: #00f2fe;
+}
+
+.dark-theme .highlight {
+  color: #00f2fe;
+}
+
+.dark-theme .tech {
+  color: #00f2fe;
+}
+
+.dark-theme strong {
+  color: #e0f7ff;
+}
+
+.dark-theme .link {
+  color: #00f2fe;
+}
+
+.dark-theme .link:hover {
+  color: #00ffff;
+  text-decoration: underline;
+}
+
+.dark-theme .about-contact .contact-list li {
+  color: #e0f7ff;
+}
+
+.dark-theme .about-contact .contact-list i {
+  color: #00f2fe;
+}
+
+.dark-theme .about-contact .label {
+  color: #a0f4ff;
+}
+
+/* ========================
+   About Text
+======================== */
 .about-content {
   max-width: 1200px;
   margin: auto;
@@ -24,32 +117,7 @@
   font-size: 1.05rem;
   line-height: 1.8;
   margin-bottom: 18px;
-}
-
-.about-section .highlight {
-  color: #00f2fe;
-  font-weight: bold;
-}
-
-.about-section .tech {
-  color: #00f2fe;
-  font-weight: 500;
-}
-
-.about-section strong {
-  color: #fff;
-}
-
-.about-section .link {
-  color: #00f2fe;
-  font-weight: 500;
-  text-decoration: none;
   transition: color 0.3s ease;
-}
-
-.about-section .link:hover {
-  color: #00ffff;
-  text-decoration: underline;
 }
 
 /* ========================
@@ -58,17 +126,18 @@
 .about-contact .contact-list li {
   margin-bottom: 15px;
   font-size: 1.05rem;
+  transition: color 0.3s ease;
 }
 
 .about-contact .contact-list i {
-  color: #00f2fe;
   margin-right: 10px;
   width: 20px;
+  transition: color 0.3s ease;
 }
 
 .about-contact .label {
   font-weight: 600;
-  color: #e0e0e0;
+  transition: color 0.3s ease;
 }
 
 /* ========================

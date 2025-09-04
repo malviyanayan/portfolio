@@ -4,15 +4,32 @@
 .contact-section {
   padding: 80px 20px;
   background: transparent;
-  color: #fff;
   text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* Light/Dark Theme Section */
+.contact-light {
+  color: #1a1a1a;
+}
+
+.contact-dark {
+  color: #fff;
 }
 
 .contact-section .section-title {
   font-size: 2.5rem;
   margin-bottom: 40px;
-  color: #00f2fe;
   position: relative;
+  transition: color 0.3s ease;
+}
+
+.contact-light .section-title {
+  color: #1a1a1a;
+}
+
+.contact-dark .section-title {
+  color: #00f2fe;
 }
 
 /* ========================
@@ -22,6 +39,18 @@
   max-width: 700px;
   margin: 0 auto;
   text-align: left;
+  transition: all 0.3s ease;
+}
+
+/* Light/Dark Form Background */
+.contact-form-light {
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.contact-form-dark {
+  padding: 30px;
+  border-radius: 8px;
 }
 
 .contact-form .form-group {
@@ -32,6 +61,14 @@
   display: block;
   font-weight: 500;
   margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+.contact-light .contact-form label {
+  color: #1a1a1a;
+}
+
+.contact-dark .contact-form label {
   color: #e0e0e0;
 }
 
@@ -39,12 +76,23 @@
 .contact-form textarea {
   width: 100%;
   padding: 12px 14px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 6px;
-  background: rgba(255, 255, 255, 0.05);
-  color: #fff;
   font-size: 1rem;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.contact-light .contact-form input,
+.contact-light .contact-form textarea {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.464);
+  color: #1a1a1a;
+}
+
+.contact-dark .contact-form input,
+.contact-dark .contact-form textarea {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
 }
 
 .contact-form input:focus,
@@ -68,18 +116,28 @@
 
 .submit-btn {
   background: transparent;
-  border: 1px solid #00f2fe;
-  color: #00f2fe;
-  padding: 10px 28px;
   border-radius: 4px;
   font-weight: 500;
   cursor: pointer;
+  padding: 10px 28px;
   transition: all 0.3s ease;
 }
 
+/* Light/Dark Submit Button */
+.contact-light .submit-btn {
+  color: #1a1a1a;
+  border: 1px solid #1a1a1a;
+}
+
+.contact-dark .submit-btn {
+  color: #00f2fe;
+  border: 1px solid #00f2fe;
+}
+
 .submit-btn:hover {
-  background: #00f2fe;
-  color: #000;
+  background: #1abc9c;
+  color: #fff;
+  border-color: #1abc9c;
 }
 
 /* ========================
@@ -95,7 +153,9 @@
   }
 }
 
-
+/* ========================
+   Error / Success Text
+======================== */
 .error-text {
   color: #ff4d4d;
   font-size: 0.85rem;
@@ -103,9 +163,17 @@
 }
 
 .success-text {
-  color: #28a745;
   font-size: 0.9rem;
   margin-top: 15px;
   text-align: center;
   font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.contact-light .success-text {
+  color: #28a745;
+}
+
+.contact-dark .success-text {
+  color: #7eff92;
 }
