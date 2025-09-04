@@ -11,7 +11,7 @@ export default function Leetcode() {
   return (
     <div className="leetcode-container">
       <FadeInOnScroll>
-        <h2 className="section-title"> My Competitive Profile</h2>
+        <h2 className="section-title" style={{color : `${theme ? '#1a1a1a' : '#00f2fe'}`}}> My Competitive Profile</h2>
       </FadeInOnScroll>
 
       <RotateUpOnScroll>

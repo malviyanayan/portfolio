@@ -38,7 +38,7 @@ const Education = () => {
       {/* Title */}
       <FadeInOnScroll>
         <div className="education-section-title">
-          <h2 className="section-title">Education</h2>
+          <h2 className="section-title" style={{color : `${theme ? '#1a1a1a' : '#00f2fe'}`}}>Education</h2>
           <p>Currently – Undergraduate</p>
         </div>
       </FadeInOnScroll>

@@ -1,0 +1,32 @@
+/* .allprojects-light .allprojects-dark {
+  
+} */
+
+.allprojects-light {
+  /* background-color: #f8f9fa; */
+  color: #333;
+}
+
+.allprojects-dark {
+  /* background-color: #0d1b2a; */
+  color: #e0f7ff;
+}
+
+.allprojects-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.ant-tabs-tab {
+  font-weight: 500;
+}
+
+.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #00f2fe !important;
+}
+
+.ant-tabs-content-holder {
+  padding-top: 20px;
+}

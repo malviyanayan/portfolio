@@ -1,0 +1,113 @@
+.myproject-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.myproject-card:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+/* Image */
+.myproject-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Title */
+.myproject-title {
+  margin-top: 15px;
+  font-size: 1.5rem;
+}
+
+/* Subtitle */
+.myproject-subtitle {
+  font-style: italic;
+  margin-top: 5px;
+  font-size: 1rem;
+}
+
+/* Description */
+.myproject-desc {
+  margin-top: 10px;
+  text-align: justify;
+  font-size: 0.95rem;
+}
+
+/* Button */
+.myproject-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* ========================
+   Light Theme
+======================== */
+.light {
+  background-color: #f8f9fa;
+  border: 1px solid #ccc;
+  /* box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); */
+}
+
+.light .myproject-title {
+  color: #333;
+}
+
+.light .myproject-subtitle {
+  color: #555;
+}
+
+.light .myproject-desc {
+  color: #444;
+}
+
+.light .myproject-btn {
+  background-color: #00b4d8;
+  color: #fff;
+}
+
+.light .myproject-btn:hover {
+  background-color: #0077b6;
+}
+
+/* ========================
+   Dark Theme
+======================== */
+.dark {
+  /* background: linear-gradient(135deg, rgba(0, 242, 255, 0.05), rgba(255, 255, 255, 0.01)); */
+  /* border: 1px solid rgba(0, 242, 255, 0.15); */
+  /* box-shadow: 0 6px 25px rgba(0, 242, 255, 0.08); */
+}
+
+.dark .myproject-title {
+  color: #00f0ff;
+}
+
+.dark .myproject-subtitle {
+  color: #a7f1f8;
+}
+
+.dark .myproject-desc {
+  color: #e0f7ff;
+}
+
+.dark .myproject-btn {
+  background-color: #00f2fe;
+  color: #000;
+}
+
+.dark .myproject-btn:hover {
+  background-color: #00c1d4;
+}
+
+
