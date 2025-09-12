@@ -6,6 +6,7 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import "./css/theme.css";
 import Error from "./components/Error";
 import AllProjects from "./components/AllProjects";
+import TempNavbar from "./components/TempNavbar";
 
 const router = createBrowserRouter([
   {
@@ -20,7 +21,7 @@ const router = createBrowserRouter([
     path: "/projects",
     element: <>
       <StarryBackground />
-      <Navbar />
+      <TempNavbar />
       <AllProjects />
     </>
   },

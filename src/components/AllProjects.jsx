@@ -3,7 +3,7 @@ import { Tabs } from "antd";
 import "antd/dist/reset.css";
 import MyProject from "./MyProject";
 import { useSelector } from "react-redux";
-import "../css/all_projects.css"; // CSS alag se
+import "../css/all_projects.css";
 
 const { TabPane } = Tabs;
 
@@ -12,7 +12,7 @@ const AllProjects = () => {
 
   const projects = [
     {
-      title: "E Learning Plateform",
+      title: "E Learning Platform",
       url: "https://learnify-8pya.onrender.com/",
       image: "projects/learnify.png",
       subtitle: "Full-stack course platform",
@@ -21,50 +21,39 @@ const AllProjects = () => {
     },
     {
       title: "DoFocus",
-      url: "https://dofocus.netlify.app",
+      url: "https://dofocus.netlify.app/",
       image: "projects/dofocus.png",
-      subtitle: "Daily challenge tracker",
+      tech: {
+        frontend: ["React", "Bootstrap"],
+        backend: ["Advanced Java"],
+        database: [],
+        other: "",
+      },
+      subtitle: "Daily challenge tracker with to-do list and personal notes.",
       description:
-        "DoFocus is a productivity-focused tool designed to help users build daily habits and monitor personal progress. Includes to-do list and notes feature.",
-    },
-    {
-      title: "My Portfolio Website",
-      url: "https://nayanmalviya.netlify.app",
-      image: "projects/portfolio.png",
-      subtitle: "Check out my portfolio",
-      description:
-        "My personal portfolio website showcases my technical skills, professional background, and key projects. Built with HTML, CSS, and JavaScript.",
-    },
-    {
-      title: "Weather App",
-      url: "https://skysence.netlify.app",
-      image: "projects/weather.png",
-      subtitle: "Weather forecasting app",
-      description:
-        "SkySence provides real-time weather updates including temperature, humidity, and wind speed based on user location or city input.",
+        "DoFocus is a productivity-focused tool designed to help users build daily habits and monitor personal progress. It includes a challenge-based tracker system, customizable to-do list, and personal notes section. Built using React and styled with Bootstrap, the app supports local storage and smooth transitions for better usability. Ideal for self-discipline and routine-building enthusiasts looking to stay organized.",
     },
   ];
 
   return (
-    <div
-      className={`mx-3 px-2 ${theme ? "allprojects-light" : "allprojects-dark"}`}
-      style={{ marginTop: "16vh"}}
-    >
+    <div className={theme ? "allprojects-light" : "allprojects-dark"}>
+  <Tabs
+    defaultActiveKey="0"
+    tabPosition="top"
+    type="line"
+    size="large"
+    style={{ overflowX: "auto"}}
+  >
+    {projects.map((project, index) => (
+      <TabPane tab={project.title} key={index.toString()}>
+        <div style={{ marginTop: "20px" }}> {/* Extra space for images/content */}
+          <MyProject project={project} />
+        </div>
+      </TabPane>
+    ))}
+  </Tabs>
+</div>
 
-      <Tabs
-        defaultActiveKey="0"
-        tabPosition="top"
-        type="line"
-        size="large"
-        style={{ overflowX: "auto",color:"white" }}
-      >
-        {projects.map((project, index) => (
-          <TabPane tab={project.title} key={index.toString()}>
-            <MyProject project={project} />
-          </TabPane>
-        ))}
-      </Tabs>
-    </div>
   );
 };
 

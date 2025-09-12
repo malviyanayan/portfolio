@@ -2,28 +2,41 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 16px;
   border-radius: 12px;
   margin: 20px auto;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 700px;
+  width: 100%;
 }
 
 .myproject-card:hover {
   transform: translateY(-5px) scale(1.02);
 }
 
-/* Image */
+/* Carousel container */
+.myproject-carousel {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 3px solid #00b4d8;
+}
+
+/* Carousel images */
 .myproject-img {
   width: 100%;
-  height: 250px;
+  height: 300px;
   object-fit: cover;
-  border-radius: 8px;
+  display: block;
+  border-radius: 10px;
 }
 
 /* Title */
 .myproject-title {
   margin-top: 15px;
   font-size: 1.5rem;
+  text-align: center;
 }
 
 /* Subtitle */
@@ -31,6 +44,7 @@
   font-style: italic;
   margin-top: 5px;
   font-size: 1rem;
+  text-align: center;
 }
 
 /* Description */
@@ -38,27 +52,23 @@
   margin-top: 10px;
   text-align: justify;
   font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 /* Button */
 .myproject-btn {
   margin-top: 15px;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 6px;
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;
+  display: inline-block;
 }
 
 /* ========================
    Light Theme
 ======================== */
-.light {
-  background-color: #f8f9fa;
-  border: 1px solid #ccc;
-  /* box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); */
-}
-
 .light .myproject-title {
   color: #333;
 }
@@ -83,12 +93,6 @@
 /* ========================
    Dark Theme
 ======================== */
-.dark {
-  /* background: linear-gradient(135deg, rgba(0, 242, 255, 0.05), rgba(255, 255, 255, 0.01)); */
-  /* border: 1px solid rgba(0, 242, 255, 0.15); */
-  /* box-shadow: 0 6px 25px rgba(0, 242, 255, 0.08); */
-}
-
 .dark .myproject-title {
   color: #00f0ff;
 }
@@ -110,4 +114,63 @@
   background-color: #00c1d4;
 }
 
+/* ========================
+   Carousel Dots Styling
+======================== */
+.myproject-carousel .slick-dots li button {
+  background: #bbb !important;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
 
+.myproject-carousel .slick-dots li.slick-active button {
+  background: #00f2fe !important;
+}
+
+/* ========================
+   Responsive
+======================== */
+@media (max-width: 768px) {
+  .myproject-carousel {
+    height: 220px;
+  }
+
+  .myproject-img {
+    height: 220px;
+  }
+
+  .myproject-title {
+    font-size: 1.25rem;
+  }
+
+  .myproject-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .myproject-desc {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .myproject-carousel {
+    height: 180px;
+  }
+
+  .myproject-img {
+    height: 180px;
+  }
+
+  .myproject-title {
+    font-size: 1.1rem;
+  }
+
+  .myproject-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .myproject-desc {
+    font-size: 0.85rem;
+  }
+}
