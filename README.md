@@ -1,58 +1,33 @@
 <div align="center">
 
-# DoFocus
+# My Portfolio Website  
 
-**Frontend Repository – React Only**
-
-A productivity web app for **self progress monitoring**, task tracking, and goal management, featuring **JWT-based authentication** and a **modern, responsive UI**.
+🌐 **Live Link:** [https://nayan-malviya.netlify.app](https://nayan-malviya.netlify.app)
 
 </div>
 
 ---
 
-> 📝 **Note:**  
-> This project is still under development. Both the **frontend** and **backend** are in progress — it’s **not a completed project yet**.  
->  
-> 🔗 **Frontend Live Link:** [https://dofocus.netlify.app/](https://dofocus.netlify.app/)  
-> 🗂️ **Backend Repository:** [https://github.com/malviyanayan/dofocus_backend](https://github.com/malviyanayan/dofocus_backend)
-
----
-
 ## 📌 About the Project
 
-DoFocus is a **React-based productivity application** designed to help users **track tasks, set goals, and monitor their progress** efficiently.  
-It emphasizes a **clean, intuitive interface** and **secure authentication** to provide a seamless user experience.
+**My Portfolio Website** is a **React + Vite-based** personal website built to showcase my **skills and projects** in a clean and interactive way.  
+It focuses on a **modern UI**, **smooth animations**, and **fast performance** for a professional online presence.
 
 **Key Highlights:**
 
-- Built **DoFocus** using **React** with a clean and responsive UI.
-- Added features like **to-do lists, goal tracking, and personal notes** with secure login using **JWT**.
-- Provides a **dashboard to track progress** and manage tasks easily.
-
----
-
-## 📸 Screenshots
-
-Here are some screenshots of the website:
-
-| Screenshot                                               | Description                   |
-| -------------------------------------------------------- | ----------------------------- |
-| ![Home Page](readme_images/home.png)                     | Home Page                     |
-| ![Sign In & Register](readme_images/signin_register.png) | Sign In & Register            |
-| ![Courses Section](readme_images/notes.png)              | Notes Page                    |
-| ![Course Details](readme_images/todos.png)               | Todos Page                    |
-| ![Course Preview](readme_images/streak.png)              | Maintain Daily Streak Section |
+- Developed using **React (Vite)** with a **responsive and minimal UI**.  
+- Integrated **Framer Motion** for smooth animations and transitions.  
+- Showcases **projects, skills, and contact information** with easy navigation.
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Layer      | Technology                                              |
-| ---------- | ------------------------------------------------------- |
-| Backend    | Spring Boot + Hibernate + Maven _(work in progress)_    |
-| Frontend   | React, Bootstrap                                        |
-| Build Tool | Vite (Frontend), Maven (Backend)                        |
-| Deployment | Netlify (Frontend), Render _(Backend not yet deployed)_ |
+| Layer      | Technology       |
+| ---------- | ---------------- |
+| Frontend   | React, Bootstrap |
+| Build Tool | Vite             |
+| Deployment | Netlify          |
 
 ---
 
@@ -63,8 +38,8 @@ Here are some screenshots of the website:
 1. **Clone the Repository**
 
 ```bash
- git clone https://github.com/malviyanayan/dofocus.git
- cd dofocus
+ git https://github.com/malviyanayan/portfolio.git
+ cd portfolio
 ```
 
 2. **Install Dependencies**
