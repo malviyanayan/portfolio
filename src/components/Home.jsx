@@ -60,7 +60,7 @@ const Home = () => {
 
         <ScrollFromRight>
           <img
-            src="/images/home1.jpeg"
+            src="/images/nayan2.png"
             alt="my-image"
             className="profile-image"
           />
