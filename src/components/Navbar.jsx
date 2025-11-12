@@ -24,8 +24,8 @@ const Navbar = () => {
             className={`d-flex h-100 align-items-center gap-2 nav-logo ${
               theme ? "logo-light" : "logo-dark"
             }`}
+            style={{fontFamily:"'Playfair Display', sans-serif"}}
           >
-            <img src="/fabicon1.svg" width={28} />
             Nayan Malviya
           </div>
 
