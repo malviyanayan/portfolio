@@ -23,14 +23,15 @@ const ProjectCard = ({ project }) => {
 
         {/* Bottom Buttons */}
         <div className="project-buttons">
-          <button className="btn more-btn">View More</button>
+          {/* <a className="btn more-btn">Explore</a> */}
           <a
-            href={url}
+            href={`https://github.com/malviyanayan/${project.github}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn live-btn"
+            className="btn live-btn d-flex align-items-center gap-2 fw-bold"
           >
-            Live Demo
+            View
+            <i class="fa-brands fa-github"></i>
           </a>
         </div>
       </div>

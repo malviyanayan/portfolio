@@ -11,6 +11,7 @@ export default function Projects() {
     {
       title: "E Learning Plateform",
       url: "https://learnify-8pya.onrender.com/",
+      github: "Learnify_E_Learning_Plateform",
       image: "projects/learnify.png",
       tech: {
         frontend: ["HTML", "CSS", "Bootstrap", "JavaScript"],
@@ -19,35 +20,37 @@ export default function Projects() {
         other: "",
       },
       subtitle:
-        "Full-stack course platform with user progress tracking and note-taking.",
+        "Full Stack E-Learning Platform for Students and Trainers",
       description:
         "This project is a comprehensive e-learning platform that allows students to enroll in courses, track their individual progress, and take notes while learning. Built using Advanced Java and Bootstrap, the platform ensures a smooth user experience with features like chapter navigation, interactive sessions, and responsive layouts. It includes user registration, authentication, and a clean dashboard for managing content efficiently.",
     },
     {
-      title: "DoFocus",
+      title: "Smilora-Dental Website",
       url: "https://dofocus.netlify.app/",
-      image: "projects/dofocus.png",
+      github: "smilora",
+      image: "projects/smilora.png",
       tech: {
-        frontend: ["React", "Bootstrap"],
+        frontend: ["HTML","CSS", "JavaScript", "React", "Bootstrap"],
         backend: ["Advanced Java"],
         database: [],
         other: "",
       },
-      subtitle: "Daily challenge tracker with to-do list and personal notes.",
+      subtitle: "A Dental Websie for patient appointment and services.",
       description:
         "DoFocus is a productivity-focused tool designed to help users build daily habits and monitor personal progress. It includes a challenge-based tracker system, customizable to-do list, and personal notes section. Built using React and styled with Bootstrap, the app supports local storage and smooth transitions for better usability. Ideal for self-discipline and routine-building enthusiasts looking to stay organized.",
     },
     {
       title: "My Portfolio Website",
       url: "https://nayanmalviya.netlify.app",
-      image: "projects/portfolio.png",
+      github: "portfolio",
+      image: "projects/porfolio.png",
       tech: {
         frontend: ["HTML", "CSS", "JavaScript"],
         backend: [],
         database: [],
         other: "",
       },
-      subtitle: "Check out my portfolio and let's connect!",
+      subtitle: "A React and Redux-based personal portfolio website that showcases my work.",
       description:
         "My personal portfolio website showcases my technical skills, professional background, and key projects. The site is built with clean HTML, CSS, and JavaScript, featuring modern UI components, smooth scrolling, and responsive design. It includes sections such as About, Skills, Projects, and Contact. This website serves as a gateway for recruiters and collaborators to understand my capabilities and reach out.",
     },
@@ -65,13 +68,13 @@ export default function Projects() {
         ))}
       </div>
 
-      <FadeInOnScroll>
+      {/* <FadeInOnScroll>
         <div className="right-btn-container">
           <button className={`right-btn ${theme ? "btn-light-mode" : "btn-dark-mode"}`}>
             More Projects...
           </button>
         </div>
-      </FadeInOnScroll>
+      </FadeInOnScroll> */}
     </section>
   );
 }
