@@ -107,7 +107,7 @@ const Navbar = () => {
             <div className="profile-photo-wrapper">
               <FadeInOnScroll>
                 <img
-                  src="/images/profilephoto.png"
+                  src="/images/nayan2.png"
                   alt="My Photo"
                   className="profile-photo border border-5 border-dark"
                 />
