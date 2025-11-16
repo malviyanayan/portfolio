@@ -1,0 +1,43 @@
+.tech-box ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.tech-box li {
+  border-radius: 1px; 
+  padding: 10px 18px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  min-width: 140px;
+  cursor: pointer;
+}
+
+.skills-light .tech-box li {
+  color: #1a1a1a;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.skills-dark .tech-box li {
+  color: #e0e0e0;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.tech-box li:hover {
+  transform: translateY(-5px) scale(1.03);
+  background-color: rgba(0, 242, 254, 0.1);
+}
+
+.tech-box li img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  object-fit: contain;
+  transition: filter 0.3s ease;
+}
+

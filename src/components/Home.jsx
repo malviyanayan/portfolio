@@ -5,10 +5,10 @@ import FadeInOnScroll from "./animation/FadeInOnScroll";
 import {useSelector } from "react-redux";
 
 const titles = [
-  "Full Stack Developer",
   "Java Developer",
+  "Student at BGIEM",
   "React Enthusiast",
-  "Backend Engineer",
+  "Backend Developer",
 ];
 
 const Home = () => {
@@ -44,12 +44,24 @@ const Home = () => {
           <h2 className={`${theme ? 'tc-light' : ''}`}>Hi There!</h2>
         </FadeInOnScroll>
         <FadeInOnScroll>
-          <h1>I'M NAYAN MALVIYA</h1>
+          <h1 className="fs-1">I'M NAYAN MALVIYA</h1>
+        </FadeInOnScroll>
+        <FadeInOnScroll>
+          <div className="text-dark">
+            I am a final-year B.Tech student who enjoys learning new technologies and building simple projects. I like coding, improving my skills, and creating things that are useful. I am always trying to learn more and do better.
+          </div>
         </FadeInOnScroll>
         <FadeInOnScroll>
           <div className={`im-changing ${theme ? 'logo-light' : 'logo-dark'}`}>
           {titles[index].substring(0, subIndex)}
           <span className={`cursor ${theme ? 'logo-light' : 'logo-dark'}`}>|</span>
+          <div className="fs-4 d-flex align-items-center fw-bold gap-4 mt-4 text-secondary">
+            <i className="fa-brands fa-linkedin"></i>
+            <i className="fa-brands fa-github"></i>
+            <i className="fa-solid fa-code"></i>
+            {/* <i className="fa-brands fa-youtube"></i>
+            <i className="fa-brands fa-instagram"></i> */}
+          </div>
         </div>
         </FadeInOnScroll>
       </div>

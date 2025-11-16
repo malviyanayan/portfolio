@@ -21,11 +21,12 @@ const Navbar = () => {
           }`}
         >
           <div
-            className={`d-flex h-100 align-items-center gap-2 nav-logo ${
+            className={`d-flex h-100 align-items-center gap-2 fw-bold nav-logo ${
               theme ? "logo-light" : "logo-dark"
             }`}
             style={{fontFamily:"'Playfair Display', sans-serif"}}
           >
+            <i className="fa-solid fa-robot"></i>
             Nayan Malviya
           </div>
 

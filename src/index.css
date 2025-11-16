@@ -3,3 +3,42 @@
     font-weight: 500;
     font-style: normal;
 }
+
+
+/* ### Project card ###  ->  Courosul prev and next button */
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: black !important;
+  width: 50px;      /* optional */
+  opacity: 0.7;     /* optional */
+  border-radius: 5px; /* optional */
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1;
+}
+
+
+/* project card -> model -> icos */
+.link-icons i {
+  border: 1.5px solid #e0e0e0;
+  padding: 12px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #444;
+  font-size: 1.1rem;
+}
+
+/* Hover Effect */
+.link-icons i:hover {
+  border-color: #ffffff;
+  background: #111;               /* attractive bold effect */
+  color: #fff;                    /* icon color white */
+  transform: translateY(-4px);    /* upar halka lift */
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}
+

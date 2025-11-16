@@ -7,21 +7,21 @@ const Education = () => {
 
   const educationData = [
     {
-      title: "Bachelor of Technology in CSE",
+      title: "B Tech",
       duration: "Aug 2021 – May 2025",
       institution: "University Institute of Technology, RGPV",
-      details: "CGPA: 7.55/10",
+      details: "CGPA: 7.61/10",
       position: "left",
     },
     {
-      title: "12th - Science Stream",
+      title: "class 12th - MP Board",
       duration: "Apr 2020 – Apr 2021",
       institution: "Govt. Higher Secondary School",
       details: "Percentage: 90.4%",
       position: "right",
     },
     {
-      title: "10th Board",
+      title: "class 10th - MP Board",
       duration: "Apr 2018 – Apr 2019",
       institution: "Govt. High School",
       details: "Percentage: 90.6%",
