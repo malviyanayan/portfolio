@@ -1,62 +1,59 @@
-<div align="center">
+# Nayan Malviya — Portfolio
 
-# My Portfolio Website  
+Personal portfolio website for **Nayan Malviya**, a Full-Stack Developer and Software Engineer based in Jabalpur, India.
 
-🌐 **Live Link:** [https://nayan-malviya.netlify.app](https://nayan-malviya.netlify.app)
-
-</div>
+Live at: [nayan-malviya.netlify.app](https://nayan-malviya.netlify.app)
 
 ---
 
-## 📌 About the Project
+## Tech Stack
 
-**My Portfolio Website** is a **React + Vite-based** personal website built to showcase my **skills and projects** in a clean and interactive way.  
-It focuses on a **modern UI**, **smooth animations**, and **fast performance** for a professional online presence.
-
-**Key Highlights:**
-
-- Developed using **React (Vite)** with a **responsive and minimal UI**.  
-- Integrated **Framer Motion** for smooth animations and transitions.  
-- Showcases **projects, skills, and contact information** with easy navigation.
+- **React 18 + TypeScript** — component-driven UI
+- **Vite** — fast dev server and build tool
+- **Tailwind CSS** — utility-first styling
+- **Framer Motion** — animations and transitions
+- **shadcn/ui** — accessible UI primitives
+- **React Router** — client-side routing
 
 ---
 
-## 🛠️ Tech Stack
+## Sections
 
-| Layer      | Technology       |
-| ---------- | ---------------- |
-| Frontend   | React, Bootstrap |
-| Build Tool | Vite             |
-| Deployment | Netlify          |
+| Section | Description |
+|---------|-------------|
+| Hero | Typewriter intro, role, and quick links |
+| About | Background, interests, and approach |
+| Skills | Categorized tech stack (Frontend, Backend, DB, Tools, etc.) |
+| Experience | Work history — currently interning at ADRS Techno |
+| Projects | 9 projects with stack, highlights, and live/GitHub links |
+| Journey | Education and certifications timeline |
+| Contact | Email, phone, and social links |
 
 ---
 
-# ⚙️ How To Run
-
-## Steps to Run This Application (Vite)
-
-1. **Clone the Repository**
-
-```bash
- git https://github.com/malviyanayan/portfolio.git
- cd portfolio
-```
-
-2. **Install Dependencies**
+## Run Locally
 
 ```bash
 npm install
-```
-
-3. **Start the Development Server**
-
-```bash
 npm run dev
 ```
 
-4. **Open in Browser**
-   Go to the URL shown in your terminal (usually:
+Open [http://localhost:8080](http://localhost:8080)
+
+---
+
+## Build
 
 ```bash
-http://localhost:5173
+npm run build
 ```
+
+Output goes to `dist/`.
+
+---
+
+## Contact
+
+- Email: naymalviya@gmail.com
+- GitHub: [github.com/nayanmalviya](https://github.com/nayanmalviya)
+- LinkedIn: [linkedin.com/in/nayan-malviya](https://linkedin.com/in/nayan-malviya)

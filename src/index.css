@@ -1,44 +1,224 @@
-*{
-    font-family: "lato", sans-serif;
-    font-weight: 500;
-    font-style: normal;
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Caveat:wght@500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Playful light — soft cream, electric pops */
+    --background: 42 38% 96%;
+    --foreground: 230 25% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 230 25% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 230 25% 12%;
+
+    --primary: 230 25% 12%;
+    --primary-foreground: 42 38% 96%;
+
+    --secondary: 42 25% 90%;
+    --secondary-foreground: 230 25% 12%;
+
+    --muted: 42 20% 92%;
+    --muted-foreground: 230 10% 40%;
+
+    --accent: 280 85% 60%;          /* electric purple */
+    --accent-foreground: 0 0% 100%;
+
+    --neon: 150 90% 50%;            /* neon green */
+    --hot: 350 90% 60%;             /* hot pink */
+    --sun: 45 100% 58%;             /* sunshine yellow */
+    --sky: 200 95% 55%;             /* electric sky */
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 230 15% 85%;
+    --input: 230 15% 85%;
+    --ring: 280 85% 60%;
+
+    --radius: 0.5rem;
+
+    --grid-color: 230 15% 50% / 0.07;
+
+    /* IDE chrome */
+    --chrome: 230 18% 96%;
+    --chrome-foreground: 230 25% 20%;
+    --rail: 230 22% 14%;
+    --rail-foreground: 42 30% 90%;
+    --statusbar: 280 85% 55%;
+    --statusbar-foreground: 0 0% 100%;
+    --tab-active: 0 0% 100%;
+    --tab-inactive: 230 18% 92%;
+
+    /* Syntax tokens (used as text colors) */
+    --syn-keyword: 280 75% 50%;
+    --syn-string: 145 65% 35%;
+    --syn-fn: 220 85% 50%;
+    --syn-num: 25 85% 50%;
+    --syn-comment: 230 10% 50%;
+    --syn-tag: 350 80% 55%;
+    --syn-var: 195 80% 40%;
+
+    --sidebar-background: 230 22% 14%;
+    --sidebar-foreground: 42 30% 90%;
+    --sidebar-primary: 280 85% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 230 18% 20%;
+    --sidebar-accent-foreground: 42 30% 90%;
+    --sidebar-border: 230 18% 22%;
+    --sidebar-ring: 280 85% 60%;
+  }
+
+  .dark {
+    --background: 230 22% 8%;
+    --foreground: 42 30% 94%;
+
+    --card: 230 22% 11%;
+    --card-foreground: 42 30% 94%;
+
+    --popover: 230 22% 11%;
+    --popover-foreground: 42 30% 94%;
+
+    --primary: 42 30% 94%;
+    --primary-foreground: 230 22% 8%;
+
+    --secondary: 230 18% 16%;
+    --secondary-foreground: 42 30% 94%;
+
+    --muted: 230 18% 16%;
+    --muted-foreground: 230 10% 65%;
+
+    --accent: 280 90% 70%;
+    --accent-foreground: 230 22% 8%;
+
+    --neon: 150 90% 55%;
+    --hot: 350 95% 68%;
+    --sun: 45 100% 62%;
+    --sky: 200 95% 60%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 230 18% 20%;
+    --input: 230 18% 20%;
+    --ring: 280 90% 70%;
+
+    --grid-color: 42 30% 90% / 0.05;
+
+    --chrome: 230 22% 11%;
+    --chrome-foreground: 42 30% 88%;
+    --rail: 230 25% 6%;
+    --rail-foreground: 42 30% 90%;
+    --statusbar: 280 90% 60%;
+    --statusbar-foreground: 230 22% 8%;
+    --tab-active: 230 22% 8%;
+    --tab-inactive: 230 22% 13%;
+
+    --syn-keyword: 280 90% 75%;
+    --syn-string: 145 65% 65%;
+    --syn-fn: 200 95% 70%;
+    --syn-num: 30 90% 65%;
+    --syn-comment: 230 10% 55%;
+    --syn-tag: 350 90% 70%;
+    --syn-var: 195 80% 65%;
+
+    --sidebar-background: 230 25% 6%;
+    --sidebar-foreground: 42 30% 90%;
+    --sidebar-primary: 280 90% 70%;
+    --sidebar-primary-foreground: 230 22% 8%;
+    --sidebar-accent: 230 22% 12%;
+    --sidebar-accent-foreground: 42 30% 90%;
+    --sidebar-border: 230 22% 14%;
+    --sidebar-ring: 280 90% 70%;
+  }
 }
 
-
-/* ### Project card ###  ->  Courosul prev and next button */
-.carousel-control-prev,
-.carousel-control-next {
-  background-color: black !important;
-  width: 50px;      /* optional */
-  opacity: 0.7;     /* optional */
-  border-radius: 5px; /* optional */
+@layer base {
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  ::selection {
+    background: hsl(var(--accent));
+    color: hsl(var(--accent-foreground));
+  }
+  /* custom scrollbar */
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: hsl(var(--background)); }
+  ::-webkit-scrollbar-thumb { background: hsl(var(--border)); border-radius: 8px; }
+  ::-webkit-scrollbar-thumb:hover { background: hsl(var(--accent)); }
 }
 
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-  opacity: 1;
+@layer components {
+  .font-mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+  .font-sans { font-family: 'Space Grotesk', system-ui, sans-serif; }
+  .font-hand { font-family: 'Caveat', cursive; }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(to right, hsl(var(--grid-color)) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--grid-color)) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  .dot-bg {
+    background-image: radial-gradient(hsl(var(--grid-color)) 1px, transparent 1px);
+    background-size: 18px 18px;
+  }
+
+  /* Syntax helpers */
+  .syn-k { color: hsl(var(--syn-keyword)); }
+  .syn-s { color: hsl(var(--syn-string)); }
+  .syn-f { color: hsl(var(--syn-fn)); }
+  .syn-n { color: hsl(var(--syn-num)); }
+  .syn-c { color: hsl(var(--syn-comment)); font-style: italic; }
+  .syn-t { color: hsl(var(--syn-tag)); }
+  .syn-v { color: hsl(var(--syn-var)); }
+
+  .panel {
+    @apply rounded-lg border border-border bg-card;
+    box-shadow: 0 1px 0 hsl(var(--border)), 0 12px 32px -16px hsl(var(--foreground) / 0.1);
+  }
+
+  .tab-active {
+    background: hsl(var(--tab-active));
+    color: hsl(var(--foreground));
+  }
+  .tab-inactive {
+    background: hsl(var(--tab-inactive));
+    color: hsl(var(--muted-foreground));
+  }
+
+  .sticker {
+    display: inline-block;
+    transform: rotate(-2deg);
+    @apply font-hand text-xl px-2 py-0.5 rounded;
+  }
+
+  .marquee-mask {
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  }
+
+  .glow-accent { box-shadow: 0 0 0 1px hsl(var(--accent) / 0.3), 0 8px 30px -8px hsl(var(--accent) / 0.5); }
+  .glow-neon   { box-shadow: 0 0 0 1px hsl(var(--neon) / 0.4), 0 8px 30px -8px hsl(var(--neon) / 0.5); }
+  .glow-hot    { box-shadow: 0 0 0 1px hsl(var(--hot) / 0.4), 0 8px 30px -8px hsl(var(--hot) / 0.5); }
+
+  .squiggle {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 6'><path d='M0 3 Q 10 0 20 3 T 40 3 T 60 3 T 80 3' fill='none' stroke='currentColor' stroke-width='2'/></svg>");
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-size: 80px 6px;
+    padding-bottom: 8px;
+  }
 }
 
-
-/* project card -> model -> icos */
-.link-icons i {
-  border: 1.5px solid #e0e0e0;
-  padding: 12px;
-  border-radius: 50%;
-  background: #ffffff;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  color: #444;
-  font-size: 1.1rem;
+@media (hover: hover) and (pointer: fine) {
+  body { cursor: none; }
+  a, button, [role="button"], input, textarea, select { cursor: none; }
 }
-
-/* Hover Effect */
-.link-icons i:hover {
-  border-color: #ffffff;
-  background: #111;               /* attractive bold effect */
-  color: #fff;                    /* icon color white */
-  transform: translateY(-4px);    /* upar halka lift */
-  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
-}
-
