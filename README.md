@@ -55,5 +55,5 @@ Output goes to `dist/`.
 ## Contact
 
 - Email: naymalviya@gmail.com
-- GitHub: [github.com/nayanmalviya](https://github.com/nayanmalviya)
-- LinkedIn: [linkedin.com/in/nayan-malviya](https://linkedin.com/in/nayan-malviya)
+- GitHub: [github.com/malviyanayan](https://github.com/malviyanayan)
+- LinkedIn: [linkedin.com/in/nayanmalviya](https://www.linkedin.com/in/nayanmalviya/)

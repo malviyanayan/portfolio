@@ -5,13 +5,13 @@ export const profile = {
   location: "Adhartal, Jabalpur, India",
   email: "naymalviya@gmail.com",
   phone: "+91 78281 86628",
-  resumeUrl: "/malviya_nayan_resume.pdf",
+  resumeUrl: "/malviya_nayan_resume.html",
   socials: {
-    github: "https://github.com/nayanmalviya",
-    linkedin: "https://linkedin.com/in/nayan-malviya",
+    github: "https://github.com/malviyanayan",
+    linkedin: "https://www.linkedin.com/in/nayanmalviya/",
     leetcode: "https://leetcode.com/u/malviyanayan/",
     instagram: "https://instagram.com/_btwitsnayan",
-    youtube: "https://youtube.com/@NayanMalviya",
+    youtube: "https://www.youtube.com/channel/UCLb1e0U-X-AdsLdcHiAvLnw",
   },
   intro:
     "I design and build full-stack web products with Java, Spring Boot, and React — turning hard problems into clean, scalable software. Currently shipping features as a Full-Stack Intern at ADRS Techno.",
